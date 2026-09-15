@@ -88,20 +88,53 @@ for (const rel of tracked) {
 fs.writeFileSync(path.join(OUT, 'manifest.json'), JSON.stringify(manifest));
 console.log('manifest.json:', manifest.files.length, 'archivos,', (totalBytes / 1048576).toFixed(1), 'MB alojados en files/');
 
-// --- version.txt (lo consume el updater IN-GAME del juego) -----------------
-let changelog = '';
-if (CHANGELOG_FILE && fs.existsSync(CHANGELOG_FILE)) changelog = fs.readFileSync(CHANGELOG_FILE, 'utf8').trim();
-// El parser del juego lee CHANGELOG y sigue leyendo líneas hasta una vacía o una con "=".
-// Por eso el CHANGELOG va AL FINAL y sin líneas vacías intermedias.
+// --- version.txt con CHANGELOG ACUMULADO por versiones ---------------------
+// El changelog se acumula en changelog-history.txt (fuente de verdad, mas nuevo
+// arriba, en bloques "[vX]"). En version.txt se vuelca el historial completo, de
+// modo que quien salte varias versiones (p.ej. 4.1.2 -> 4.1.4) vea TODAS las notas.
+// El parser del juego (GameVersion.rb) lee CHANGELOG y sigue tomando lineas hasta
+// una vacia o una con "=", asi que el historial NO puede llevar lineas vacias ni "=".
+const HISTORY_FILE = path.join(OUT, 'changelog-history.txt');
+
+// Notas de ESTA version (desde --changelog)
+let notes = '';
+if (CHANGELOG_FILE && fs.existsSync(CHANGELOG_FILE)) notes = fs.readFileSync(CHANGELOG_FILE, 'utf8').trim();
+
+// Carga y parsea el historial existente en bloques { ver, lines }
+const blocks = [];
+if (fs.existsSync(HISTORY_FILE)) {
+  let cur = null;
+  for (const raw of fs.readFileSync(HISTORY_FILE, 'utf8').split(/\r?\n/)) {
+    const m = raw.match(/^\[v([^\]]+)\]\s*$/);
+    if (m) { cur = { ver: m[1], lines: [] }; blocks.push(cur); }
+    else if (cur && raw.trim() !== '') cur.lines.push(raw.replace(/\s+$/, ''));
+  }
+}
+
+// Si hay notas nuevas, coloca/reemplaza el bloque de esta version ARRIBA del todo
+if (notes) {
+  const noteLines = notes.split(/\r?\n/).filter(l => l.trim() !== '');
+  const idx = blocks.findIndex(b => b.ver === VERSION);
+  if (idx >= 0) blocks.splice(idx, 1);
+  blocks.unshift({ ver: VERSION, lines: noteLines });
+}
+
+// Reescribe el historial (legible, con cabeceras de version)
+const historyOut = blocks.map(b => [`[v${b.ver}]`, ...b.lines].join('\n')).join('\n');
+if (blocks.length) fs.writeFileSync(HISTORY_FILE, historyOut + '\n');
+
+// version.txt: CHANGELOG = historial acumulado, saneado para el parser del juego
+const changelogSafe = blocks
+  .flatMap(b => [`[v${b.ver}]`, ...b.lines])
+  .filter(l => l.trim() !== '' && !l.includes('='))
+  .join('\n');
+
 const vlines = [
   `GAME_VERSION=${VERSION}`,
   `FORCE_UPDATE=false`,
   `DOWNLOAD_URL=${DOWNLOAD_URL}`,
 ];
-if (changelog) {
-  const safe = changelog.split(/\r?\n/).filter(l => l.trim() !== '' && !l.includes('=')).join('\n');
-  vlines.push(`CHANGELOG=${safe}`);
-}
+if (changelogSafe) vlines.push(`CHANGELOG=${changelogSafe}`);
 fs.writeFileSync(path.join(OUT, 'version.txt'), vlines.join('\n') + '\n');
-console.log('version.txt generado (GAME_VERSION=' + VERSION + (changelog ? ', con changelog' : '') + ')');
+console.log('version.txt generado (GAME_VERSION=' + VERSION + ', changelog acumulado: ' + blocks.length + ' version(es))');
 console.log('\nListo. Ahora: commit + push del repo anil-game-updater y crea/actualiza el release si hace falta.');
