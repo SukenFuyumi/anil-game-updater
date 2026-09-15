@@ -27,7 +27,7 @@ const OUT = path.resolve(arg('out', '.'));                 // raíz del repo ani
 const VERSION = arg('version', null);
 const CHANGELOG_FILE = arg('changelog', null);
 // Descarga completa (primera instalación) — se muestra en el aviso in-game.
-const DOWNLOAD_URL = arg('download', 'https://drive.google.com/');
+const DOWNLOAD_URL = arg('download', 'https://drive.google.com/file/d/1yYH7Snh3UoY9Y2zil_xmXvR9fVRlP0QB/view?usp=drive_link');
 const REPO_RAW = arg('raw', 'https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main');
 
 if (!VERSION) { console.error('Falta --version (ej. 4.1.2)'); process.exit(1); }
