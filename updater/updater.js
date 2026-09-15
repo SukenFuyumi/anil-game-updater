@@ -22,8 +22,10 @@ const RAW = process.env.ANIL_UPDATER_RAW || 'https://raw.githubusercontent.com/S
 const MANIFEST_URL = RAW + '/manifest.json';
 
 // Carpeta del juego = carpeta padre del .exe (el .exe vive en <juego>/poke_updater/).
+// ANIL_GAME_DIR permite forzarla (pruebas/soporte). ANIL_UPDATER_NOLAUNCH evita reabrir el juego.
 const EXE_DIR = path.dirname(process.execPath);
-const GAME_DIR = path.resolve(EXE_DIR, '..');
+const GAME_DIR = process.env.ANIL_GAME_DIR || path.resolve(EXE_DIR, '..');
+const NO_LAUNCH = process.env.ANIL_UPDATER_NOLAUNCH === '1';
 
 function log(msg) { process.stdout.write(msg + '\n'); }
 function sha256(buf) { return crypto.createHash('sha256').update(buf).digest('hex'); }
@@ -60,6 +62,7 @@ function writeFileAtomic(rel, buf) {
 }
 
 function launchGame() {
+  if (NO_LAUNCH) { log('(no se reabre el juego: modo prueba)'); return; }
   const exe = path.join(GAME_DIR, 'Game.exe');
   if (!fs.existsSync(exe)) { log('No encuentro Game.exe; ábrelo manualmente.'); return; }
   try {
