@@ -1,3 +1,1 @@
-- Arreglo de la fuga de EV/IV en el online (combates random)
-- PP máximo en combates online para jugar en igualdad
-- Marcas de origen de cada Pokémon (Fósil, Regalo, Casino, etc.)
+- Arranque mas rapido al abrir el juego (se quito una comprobacion lenta)

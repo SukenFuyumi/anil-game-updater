@@ -122,7 +122,9 @@ module PokeUpdater
 
 	def check_for_updates(from_update_button=false)
 		return if $DEBUG
-		return if !network_available?
+		# Añil: NO usamos network_available? aquí (hacía 4 descargas completas a google/DNS/github
+		# antes de nada -> ~6s de retraso al pasar a la pantalla de partidas). La propia descarga
+		# del version.txt ya devuelve "" si no hay internet, así que basta con eso: 1 sola petición.
 		fill_updater_config() if !Config.poke_updater_config || !Config.poke_updater_config['PASTEBIN_URL']
 		if Config.poke_updater_config && Config.poke_updater_config['PASTEBIN_URL'] && Config.poke_updater_config['PASTEBIN_URL'] != ''
 			validate_game_version(from_update_button)
