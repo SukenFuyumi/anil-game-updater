@@ -1,0 +1,3 @@
+- Arreglo de la fuga de EV/IV en el online (combates random)
+- PP máximo en combates online para jugar en igualdad
+- Marcas de origen de cada Pokémon (Fósil, Regalo, Casino, etc.)

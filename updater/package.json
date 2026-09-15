@@ -1,0 +1,10 @@
+{
+  "name": "anil-updater",
+  "version": "1.0.0",
+  "description": "Actualizador de deltas del juego Pokémon Añil Online Edition",
+  "bin": "updater.js",
+  "pkg": {
+    "targets": ["node22-win-x64"],
+    "outputPath": "dist"
+  }
+}
