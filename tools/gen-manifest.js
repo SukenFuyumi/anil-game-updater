@@ -63,6 +63,24 @@ function sha256(file) {
   return crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
 }
 
+// CRC32 (IEEE, igual que Zlib.crc32 de Ruby) — lo usa el updater IN-GAME (Android/PC),
+// que solo tiene Zlib disponible (no Digest::SHA256 garantizado en mkxp-z).
+const CRC_TABLE = (() => {
+  const t = new Uint32Array(256);
+  for (let n = 0; n < 256; n++) {
+    let c = n;
+    for (let k = 0; k < 8; k++) c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1);
+    t[n] = c >>> 0;
+  }
+  return t;
+})();
+function crc32(file) {
+  const buf = fs.readFileSync(file);
+  let c = 0xFFFFFFFF;
+  for (let i = 0; i < buf.length; i++) c = CRC_TABLE[(c ^ buf[i]) & 0xFF] ^ (c >>> 8);
+  return (c ^ 0xFFFFFFFF) >>> 0;
+}
+
 function copyTo(src, destAbs) {
   fs.mkdirSync(path.dirname(destAbs), { recursive: true });
   fs.copyFileSync(src, destAbs);
@@ -80,13 +98,25 @@ let totalBytes = 0;
 for (const rel of tracked) {
   const abs = path.join(GAME, rel);
   const sha = sha256(abs);
+  const crc = crc32(abs);
   const size = fs.statSync(abs).size;
   totalBytes += size;
   copyTo(abs, path.join(filesDir, rel));
-  manifest.files.push({ path: rel, sha, size });
+  manifest.files.push({ path: rel, sha, crc32: crc, size });
 }
 fs.writeFileSync(path.join(OUT, 'manifest.json'), JSON.stringify(manifest));
 console.log('manifest.json:', manifest.files.length, 'archivos,', (totalBytes / 1048576).toFixed(1), 'MB alojados en files/');
+
+// --- manifest-lite.txt (lo consume el updater IN-GAME en Ruby) -------------
+// Formato (sin JSON, para parsear facil en mkxp-z):
+//   linea 1: version
+//   linea 2: base URL de files/
+//   resto  : "<crc32-decimal>\t<size>\t<ruta relativa>"  (TAB separa; las rutas
+//            llevan espacios pero nunca tabs)
+const liteLines = [manifest.version, manifest.base];
+for (const f of manifest.files) liteLines.push(`${f.crc32}\t${f.size}\t${f.path}`);
+fs.writeFileSync(path.join(OUT, 'manifest-lite.txt'), liteLines.join('\n') + '\n');
+console.log('manifest-lite.txt:', manifest.files.length, 'archivos (CRC32 para updater in-game).');
 
 // --- version.txt con CHANGELOG ACUMULADO por versiones ---------------------
 // El changelog se acumula en changelog-history.txt (fuente de verdad, mas nuevo

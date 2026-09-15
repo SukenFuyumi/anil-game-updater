@@ -1,3 +1,5 @@
+[v4.1.5]
+- Actualizaciones DENTRO del juego en Android (NaviaXP/JoiPlay): ya no hace falta redescargar el juego completo, ahora baja solo lo necesario como en PC.
 [v4.1.4]
 - Ash-Greninja ahora puede aparecer salvaje ya transformado en modo Randomlocke (como Palafin Heroico).
 - Arreglada la entrega de Regalos Misteriosos: el Repartidor de la Liga Pokemon y la Torre Batalla ahora si entrega los regalos que descargas.
