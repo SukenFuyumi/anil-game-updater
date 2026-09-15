@@ -1,0 +1,3 @@
+- PRUEBA del sistema de actualización automática
+- Si ves este mensaje, el updater funciona
+- (esta versión se puede revertir a la 4.1.2)
