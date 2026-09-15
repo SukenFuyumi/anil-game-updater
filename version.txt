@@ -1,6 +1,6 @@
-GAME_VERSION=4.1.3
+GAME_VERSION=4.1.2
 FORCE_UPDATE=false
 DOWNLOAD_URL=https://drive.google.com/file/d/1yYH7Snh3UoY9Y2zil_xmXvR9fVRlP0QB/view?usp=drive_link
-CHANGELOG=- PRUEBA del sistema de actualización automática
-- Si ves este mensaje, el updater funciona
-- (esta versión se puede revertir a la 4.1.2)
+CHANGELOG=- Arreglo de la fuga de EV/IV en el online (combates random)
+- PP máximo en combates online para jugar en igualdad
+- Marcas de origen de cada Pokémon (Fósil, Regalo, Casino, etc.)
