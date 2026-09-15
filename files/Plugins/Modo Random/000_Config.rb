@@ -131,7 +131,12 @@ module RandomizedChallenge
 
   # Pokémon que no pueden salir en el modo Random. Añade aquí los que no quieres que salgan
   # con el mismo formato de los que ya aparecen.
-  BLACKLISTED_POKEMON = [:ARCEUS_9, :MEWTWO_5, :GRENINJA_1, :GRENINJA_2,
+  # NOTA (Añil): GRENINJA_2 (Greninja Ash) se DESBLOQUEA a propósito para que pueda
+  # aparecer salvaje en randomlocke ya transformado, igual que Palafin Forma Heroica.
+  # No tiene manejador getFormOnLeavingBattle (comentado en 002_FormHandlers.rb), asi
+  # que conserva la forma Ash tras capturarlo. Su habilidad sale aleatoria (Vinculo de
+  # Combate esta en ABILITY_EXCLUSIONS), exactamente como pasa con Palafin.
+  BLACKLISTED_POKEMON = [:ARCEUS_9, :MEWTWO_5, :GRENINJA_1,
                          :CRAMORANT_1, :CRAMORANT_2, :SILVALLY_9, :PICHU_2]
 
   # Pokemon que no se randomizarán

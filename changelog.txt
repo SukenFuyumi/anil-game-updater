@@ -1,1 +1,2 @@
-- Arranque mas rapido al abrir el juego (se quito una comprobacion lenta)
+- Ash-Greninja ahora puede aparecer salvaje ya transformado en modo Randomlocke (como Palafin Heroico).
+- Arreglada la entrega de Regalos Misteriosos: el Repartidor de la Liga Pokemon y la Torre Batalla ahora si entrega los regalos que descargas.
