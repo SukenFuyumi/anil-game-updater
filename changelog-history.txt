@@ -1,3 +1,5 @@
+[v4.1.6]
+- Corregido: en los combates online ya no pierdes vidas (cláusula de vidas) ni escudos de Permalocke. Los combates online no afectan tu desafío.
 [v4.1.5]
 - Actualizaciones DENTRO del juego en Android (NaviaXP/JoiPlay): ya no hace falta redescargar el juego completo, ahora baja solo lo necesario como en PC.
 [v4.1.4]

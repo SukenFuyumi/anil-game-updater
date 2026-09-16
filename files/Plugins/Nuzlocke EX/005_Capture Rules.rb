@@ -32,6 +32,9 @@ class Battle::Scene
   def pbEndBattle(*args)
     ret = __challenge__pbEndBattle(*args)
     return ret if !ChallengeModes.on?
+    # Añil: los combates online no cuentan para el desafío (ni vidas, ni escudos de
+    # Permalocke, ni registro de encuentros). Salimos antes de procesar nada.
+    return ret if $anil_online_battle_active
     if ChallengeModes.on?(:MODOVIDAS) && $PokemonGlobal.challenge_lives && $PokemonGlobal.challenge_lives < 0
       pbMessage(_INTL("¡Te has quedado sin vidas, has perdido el desafío!\nTodos los modificadores de desafío estarán desactivados."))
       ChallengeModes.set_loss
@@ -173,7 +176,8 @@ ItemHandlers::CanUseInBattle.addIf(:poke_balls,
 class Battle::Battler
   alias pbFaintLives pbFaint
     def pbFaint(showMessage = true)
-      return pbFaintLives(showMessage) if !ChallengeModes.on?(:PERMAFAINT) || !@battle.pbOwnedByPlayer?(@index) || !$PokemonGlobal.challenge_lives || $PokemonGlobal.challenge_lives < 0
+      # Añil: en combates online NO se pierden vidas (igual que no hay muerte permanente).
+      return pbFaintLives(showMessage) if $anil_online_battle_active || !ChallengeModes.on?(:PERMAFAINT) || !@battle.pbOwnedByPlayer?(@index) || !$PokemonGlobal.challenge_lives || $PokemonGlobal.challenge_lives < 0
       fainted = @fainted
       done=pbFaintLives(showMessage)
       if !fainted && @fainted && @battle.pbOwnedByPlayer?(@index) && $PokemonGlobal.challenge_lives && $PokemonGlobal.challenge_lives >= 0

@@ -1,7 +1,9 @@
-GAME_VERSION=4.1.5
+GAME_VERSION=4.1.6
 FORCE_UPDATE=false
 DOWNLOAD_URL=https://drive.google.com/file/d/1yYH7Snh3UoY9Y2zil_xmXvR9fVRlP0QB/view?usp=drive_link
-CHANGELOG=[v4.1.5]
+CHANGELOG=[v4.1.6]
+- Corregido: en los combates online ya no pierdes vidas (cláusula de vidas) ni escudos de Permalocke. Los combates online no afectan tu desafío.
+[v4.1.5]
 - Actualizaciones DENTRO del juego en Android (NaviaXP/JoiPlay): ya no hace falta redescargar el juego completo, ahora baja solo lo necesario como en PC.
 [v4.1.4]
 - Ash-Greninja ahora puede aparecer salvaje ya transformado en modo Randomlocke (como Palafin Heroico).

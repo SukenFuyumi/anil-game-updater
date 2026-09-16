@@ -1,6 +1,6 @@
-4.1.5
+4.1.6
 https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
-3340303937	195	pu_config
+1325320473	195	pu_config
 2893266004	6240	mkxp.json
 4191177482	273	Data/serverinfo.ini
 766409342	1574	Data/Actors.rxdata
@@ -233,7 +233,7 @@ https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
 4254625965	14908394	Data/PkmnAnimations.rxdata
 1709305880	14807403	Data/PkmnAnimations_old.rxdata
 1318867600	1010089	Data/PkmnAnimations_older.rxdata
-1356407522	1103087	Data/PluginScripts.rxdata
+1786889330	1103220	Data/PluginScripts.rxdata
 1864363062	1259143	Data/Scripts.rxdata
 392189979	1224347	Data/ScriptsBackup.rxdata
 1829675629	377	Data/Skills.rxdata
@@ -366,7 +366,7 @@ https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
 4141736548	14527	Plugins/Nuzlocke EX/002_Rule Select.rb
 1630587297	2969	Plugins/Nuzlocke EX/003_Start and End.rb
 16929204	4917	Plugins/Nuzlocke EX/004_Permafaint.rb
-2372289202	14769	Plugins/Nuzlocke EX/005_Capture Rules.rb
+901758997	15100	Plugins/Nuzlocke EX/005_Capture Rules.rb
 3124526137	6031	Plugins/Nuzlocke EX/006_Misc.rb
 319183212	2686	Plugins/Nuzlocke EX/007_Permalocke.rb
 4274579326	187	Plugins/Nuzlocke EX/008_ModoAsistido.rb

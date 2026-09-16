@@ -1,4 +1,4 @@
-CURRENT_GAME_VERSION=4.1.5
+CURRENT_GAME_VERSION=4.1.6
 PASTEBIN_URL=https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/version.txt
 UPDATER_FILENAME=./poke_updater/anil_updater.exe
 FORCE_VERSION_CHECK=true
