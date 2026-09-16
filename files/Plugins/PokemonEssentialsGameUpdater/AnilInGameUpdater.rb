@@ -5,28 +5,23 @@
 # en Android. Este modulo hace la MISMA actualizacion por deltas pero en Ruby,
 # dentro del motor del juego, asi que sirve en movil sin redescargar todo.
 #
-# Flujo:
-#   1. Descarga manifest-lite.txt del canal (version, base URL, y por cada archivo
-#      "<crc32>\t<size>\t<ruta>").
-#   2. Compara el CRC32 (Zlib) de cada archivo local con el del manifest.
-#   3. Baja SOLO los que difieren a "<ruta>.anilnew", verificando CRC.
-#   4. Si TODOS verifican, los aplica de golpe (sobrescribe) y pide reiniciar.
-#   5. Ante cualquier fallo devuelve false -> el llamador usa el metodo antiguo.
+# Flujo: baja manifest-lite.txt, compara CRC32 de cada archivo local, baja SOLO
+# los distintos a "<ruta>.anilnew", verifica, y los aplica. Si algo falla ->
+# devuelve false y el llamador usa el metodo antiguo (link de descarga).
 #
-# IMPORTANTE (Android): el HTTPLite de Android convierte CRLF->LF al descargar
-# archivos de TEXTO (por Content-Type; los binarios .rxdata bajan intactos). Por
-# eso el CRC se calcula IGNORANDO los bytes CR (0x0D) en ambos lados (aqui y en
-# gen-manifest.js), y al aplicar se escriben los bytes tal cual bajaron.
+# NOTAS Android:
+#  - El HTTPLite convierte CRLF->LF al bajar TEXTO (binarios .rxdata intactos):
+#    por eso el CRC ignora los bytes CR (0x0D) en ambos lados (aqui y gen-manifest).
+#  - Sobrescribir un archivo existente no siempre persiste; se BORRA y se recrea,
+#    y se hace fsync para forzar el volcado a disco.
 #
-# No usa JSON (mkxp-z no lo garantiza) ni Digest::SHA256 (idem): solo Zlib + File.
+# No usa JSON ni Digest::SHA256 (mkxp-z no los garantiza): solo Zlib + File.
 #===============================================================================
 module AnilInGameUpdater
   LITE_URL = "https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/manifest-lite.txt"
 
   module_function
 
-  # Codifica un segmento de ruta como encodeURIComponent (GitHub raw espera
-  # espacios y corchetes escapados).
   def url_encode_segment(seg)
     out = ""
     seg.each_byte do |b|
@@ -49,11 +44,15 @@ module AnilInGameUpdater
   end
 
   def write_bin(relpath, data)
-    File.open(relpath, "wb") { |f| f.write(data) }
+    File.open(relpath, "wb") do |f|
+      f.write(data)
+      f.flush
+      (f.fsync rescue nil)   # forzar volcado a disco (Android no persiste sin esto)
+    end
   end
 
-  # CRC32 insensible a CR (0x0D), para que coincida entre el archivo local (CRLF
-  # en Windows) y lo que baja Android (LF). Los binarios no se ven afectados.
+  # CRC32 insensible a CR (0x0D): el HTTPLite de Android convierte CRLF->LF al
+  # bajar texto, asi que comparamos ignorando los CR en ambos lados.
   def crc_norm(data)
     Zlib.crc32(data.delete("\r"))
   end
@@ -126,15 +125,18 @@ module AnilInGameUpdater
       return false
     end
 
-    # --- Fase 2: aplicar (sobrescribir con los .anilnew ya verificados) ---
+    # --- Fase 2: aplicar. En Android sobrescribir no siempre persiste, asi que
+    # se BORRA el archivo y se vuelve a CREAR (con fsync en write_bin). ---
     applied = true
     staged.each do |tmp, real|
       begin
+        File.delete(real) rescue nil
         write_bin(real, read_bin(tmp))
-        File.delete(tmp) rescue nil
       rescue
         applied = false
+        next
       end
+      File.delete(tmp) rescue nil
     end
 
     if !applied
