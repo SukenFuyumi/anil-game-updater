@@ -8,10 +8,15 @@
 # Flujo:
 #   1. Descarga manifest-lite.txt del canal (version, base URL, y por cada archivo
 #      "<crc32>\t<size>\t<ruta>").
-#   2. Compara el CRC32 (Zlib, siempre disponible) de cada archivo local.
+#   2. Compara el CRC32 (Zlib) de cada archivo local con el del manifest.
 #   3. Baja SOLO los que difieren a "<ruta>.anilnew", verificando CRC.
 #   4. Si TODOS verifican, los aplica de golpe (sobrescribe) y pide reiniciar.
 #   5. Ante cualquier fallo devuelve false -> el llamador usa el metodo antiguo.
+#
+# IMPORTANTE (Android): el HTTPLite de Android convierte CRLF->LF al descargar
+# archivos de TEXTO (por Content-Type; los binarios .rxdata bajan intactos). Por
+# eso el CRC se calcula IGNORANDO los bytes CR (0x0D) en ambos lados (aqui y en
+# gen-manifest.js), y al aplicar se escriben los bytes tal cual bajaron.
 #
 # No usa JSON (mkxp-z no lo garantiza) ni Digest::SHA256 (idem): solo Zlib + File.
 #===============================================================================
@@ -20,8 +25,8 @@ module AnilInGameUpdater
 
   module_function
 
-  # Codifica un segmento de ruta como encodeURIComponent (para la URL de descarga
-  # en GitHub raw, que espera espacios y corchetes escapados).
+  # Codifica un segmento de ruta como encodeURIComponent (GitHub raw espera
+  # espacios y corchetes escapados).
   def url_encode_segment(seg)
     out = ""
     seg.each_byte do |b|
@@ -47,10 +52,16 @@ module AnilInGameUpdater
     File.open(relpath, "wb") { |f| f.write(data) }
   end
 
+  # CRC32 insensible a CR (0x0D), para que coincida entre el archivo local (CRLF
+  # en Windows) y lo que baja Android (LF). Los binarios no se ven afectados.
+  def crc_norm(data)
+    Zlib.crc32(data.delete("\r"))
+  end
+
   def local_crc(relpath)
     return nil unless File.file?(relpath)
     begin
-      Zlib.crc32(read_bin(relpath))
+      crc_norm(read_bin(relpath))
     rescue
       nil
     end
@@ -59,7 +70,7 @@ module AnilInGameUpdater
   # Devuelve true SOLO si aplico una actualizacion (el llamador debe reiniciar).
   def run
     data = (pbDownloadToString(LITE_URL) rescue "")
-    return false if data.nil? || data.empty?
+    return false if data.nil? || !data.is_a?(String) || data.empty?
 
     lines = data.split("\n")
     return false if lines.length < 3
@@ -76,8 +87,8 @@ module AnilInGameUpdater
     end
     return false if entries.empty?
 
-    changed = entries.select { |e| local_crc(e[:path]) != e[:crc] }
-    return false if changed.empty?
+    changed = (entries.select { |e| local_crc(e[:path]) != e[:crc] } rescue nil)
+    return false if changed.nil? || changed.empty?
 
     total_mb = ((changed.map { |e| e[:size] }.sum / 1048576.0) * 10).round / 10.0
     if !pbConfirmMessage(_INTL("Hay una actualización disponible ({1} archivo(s), {2} MB). ¿Descargar e instalar ahora?", changed.length, total_mb))
@@ -97,8 +108,8 @@ module AnilInGameUpdater
         tmp = e[:path] + ".anilnew"
         File.delete(tmp) rescue nil
         pbDownloadToFile(url, tmp)
-        crc_ok = (File.file?(tmp) && (Zlib.crc32(read_bin(tmp)) rescue -1) == e[:crc])
-        if !crc_ok
+        if !File.file?(tmp) || (crc_norm(read_bin(tmp)) rescue -1) != e[:crc]
+          File.delete(tmp) rescue nil
           ok = false
           break
         end

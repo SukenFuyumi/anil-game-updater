@@ -77,7 +77,14 @@ const CRC_TABLE = (() => {
 function crc32(file) {
   const buf = fs.readFileSync(file);
   let c = 0xFFFFFFFF;
-  for (let i = 0; i < buf.length; i++) c = CRC_TABLE[(c ^ buf[i]) & 0xFF] ^ (c >>> 8);
+  for (let i = 0; i < buf.length; i++) {
+    // Ignorar bytes CR (0x0D): el HTTPLite de Android convierte CRLF->LF al
+    // descargar archivos de TEXTO, asi que hacemos el CRC insensible a CR.
+    // (Los binarios .rxdata bajan intactos, pero rara vez tienen CR suelto;
+    //  ignorarlo tambien en ellos mantiene el CRC consistente en ambos lados.)
+    if (buf[i] === 0x0D) continue;
+    c = CRC_TABLE[(c ^ buf[i]) & 0xFF] ^ (c >>> 8);
+  }
   return (c ^ 0xFFFFFFFF) >>> 0;
 }
 

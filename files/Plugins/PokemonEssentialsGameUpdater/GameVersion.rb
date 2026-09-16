@@ -258,21 +258,23 @@ module PokeUpdater
 					if changelog && changelog.length > 0
 						pbMessage("Novedades de esta versión:\n#{changelog}")
 					end
-					if $joiplay
-						# Añil: en movil (Android/NaviaXP/JoiPlay) el anil_updater.exe no puede
-						# correr, asi que intentamos primero el updater IN-GAME en Ruby (deltas,
-						# sin redescargar todo). Si falla, caemos al metodo antiguo (link).
+					# Añil: intentamos PRIMERO el updater IN-GAME en Ruby, SIN depender de
+					# $joiplay (NaviaXP no la activa) ni del .exe. Sirve en PC, Android, NaviaXP
+					# y JoiPlay (deltas, sin redescargar todo). Si aplica -> reinicia; si no,
+					# se sigue con el flujo normal ($joiplay / boton / .exe / link).
+					updated_in_game = false
+					begin
+						updated_in_game = AnilInGameUpdater.run if defined?(AnilInGameUpdater)
+					rescue => e
+						puts "AnilInGameUpdater error: #{e.message}" if $DEBUG_LOG
 						updated_in_game = false
-						begin
-							updated_in_game = AnilInGameUpdater.run if defined?(AnilInGameUpdater)
-						rescue => e
-							puts "AnilInGameUpdater error: #{e.message}" if $DEBUG_LOG
-							updated_in_game = false
-						end
-						if updated_in_game
-							(Kernel.exit! rescue nil)
-							return
-						end
+					end
+					if updated_in_game
+						(Kernel.exit! rescue nil)
+						return
+					end
+
+					if $joiplay
 						pbMessage(get_poke_updater_text('JOIPLAY_UPDATE').to_s)
 						if download_url && pbConfirmMessage(_INTL("¿Quieres abrir el link de la descarga?"))
 							begin

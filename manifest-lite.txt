@@ -1,262 +1,262 @@
-4.1.6
+4.1.7
 https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
-1325320473	195	pu_config
-2893266004	6240	mkxp.json
+912055249	195	pu_config
+546257780	6240	mkxp.json
 4191177482	273	Data/serverinfo.ini
-766409342	1574	Data/Actors.rxdata
-2207797948	47418	Data/Animations.rxdata
+393078057	1574	Data/Actors.rxdata
+521312382	47418	Data/Animations.rxdata
 4036365068	222	Data/Armors.rxdata
-2614633501	182	Data/Classes.rxdata
-3964264040	235279	Data/CommonEvents.rxdata
-1836304079	541	Data/Enemies.rxdata
-4286690951	428	Data/Items.rxdata
-367192	16179	Data/Map001.rxdata
-2078476235	65275	Data/Map002.rxdata
-3867576214	33598	Data/Map003.rxdata
-4064681965	77227	Data/Map004.rxdata
-3697035444	78902	Data/Map005.rxdata
-370478461	46479	Data/Map006.rxdata
-4134978135	34718	Data/Map007.rxdata
-282874468	69015	Data/Map008.rxdata
-206806999	80256	Data/Map009.rxdata
-3303838299	53385	Data/Map010.rxdata
-3264924366	77709	Data/Map011.rxdata
-2894605066	65776	Data/Map012.rxdata
-3921198915	91842	Data/Map013.rxdata
-3417814255	60309	Data/Map014.rxdata
-3888680555	107889	Data/Map015.rxdata
-1456064880	64434	Data/Map016.rxdata
-564424943	48075	Data/Map017.rxdata
-721664519	50376	Data/Map018.rxdata
-934191452	79291	Data/Map019.rxdata
-2779358696	57633	Data/Map020.rxdata
-2458613311	77716	Data/Map021.rxdata
-4228105276	55676	Data/Map022.rxdata
-407979402	94710	Data/Map023.rxdata
-1209550393	35475	Data/Map024.rxdata
-1195606947	103261	Data/Map025.rxdata
-2313385151	103693	Data/Map026.rxdata
-995180207	42755	Data/Map027.rxdata
-1134908188	29860	Data/Map028.rxdata
-2716209488	105141	Data/Map029.rxdata
-3586641000	27145	Data/Map030.rxdata
-816266565	12324	Data/Map031.rxdata
-1520332715	8595	Data/Map032.rxdata
-388398087	19721	Data/Map033.rxdata
-338891887	6466	Data/Map034.rxdata
-1060000609	11217	Data/Map035.rxdata
-2784141540	12930	Data/Map036.rxdata
-2833706760	20872	Data/Map037.rxdata
-3263770870	29555	Data/Map038.rxdata
-1612551793	20828	Data/Map039.rxdata
-588621256	39598	Data/Map040.rxdata
-2639909711	6035	Data/Map041.rxdata
-3123906350	22059	Data/Map042.rxdata
-2464647617	12412	Data/Map043.rxdata
-1612712197	5086	Data/Map044.rxdata
-2181487273	29179	Data/Map045.rxdata
-700122305	14672	Data/Map046.rxdata
-173966095	15250	Data/Map047.rxdata
-4205787906	13895	Data/Map048.rxdata
-307742526	14112	Data/Map049.rxdata
-1584013204	26822	Data/Map050.rxdata
-4071965738	12337	Data/Map051.rxdata
-6489534	12378	Data/Map052.rxdata
-249570990	6420	Data/Map053.rxdata
-1432925520	26502	Data/Map054.rxdata
-433639134	34405	Data/Map055.rxdata
-2821416	71000	Data/Map056.rxdata
-171122214	25114	Data/Map057.rxdata
-3659473186	91742	Data/Map058.rxdata
-4016424742	84600	Data/Map059.rxdata
-254408269	6043	Data/Map060.rxdata
-3763716399	13445	Data/Map061.rxdata
-3837015012	30731	Data/Map062.rxdata
-554885035	12299	Data/Map063.rxdata
-2805832585	92625	Data/Map064.rxdata
-1040627665	43985	Data/Map065.rxdata
-3728887113	9641	Data/Map066.rxdata
-2840375341	16735	Data/Map067.rxdata
-100347860	8353	Data/Map068.rxdata
-2065413870	21460	Data/Map069.rxdata
-2741730457	13206	Data/Map070.rxdata
-4158170758	67198	Data/Map071.rxdata
-3619924647	22831	Data/Map072.rxdata
-3879086174	13176	Data/Map073.rxdata
-2311562290	13211	Data/Map074.rxdata
-603662544	64990	Data/Map075.rxdata
-1323819804	75585	Data/Map076.rxdata
-1255950845	15856	Data/Map077.rxdata
-2067381289	46059	Data/Map078.rxdata
-1446478905	7060	Data/Map079.rxdata
-3078202135	45390	Data/Map080.rxdata
-3330664212	24821	Data/Map081.rxdata
-614305785	24836	Data/Map082.rxdata
-167941306	39443	Data/Map083.rxdata
-2553612849	24865	Data/Map084.rxdata
-372022411	41057	Data/Map085.rxdata
-1167744244	64469	Data/Map086.rxdata
-1830437491	70687	Data/Map087.rxdata
-2494942350	15915	Data/Map088.rxdata
-305891428	6565	Data/Map089.rxdata
-3146766989	6177	Data/Map090.rxdata
-2059482714	68403	Data/Map091.rxdata
-881791775	60303	Data/Map092.rxdata
-3591193355	66075	Data/Map093.rxdata
-3172527961	73893	Data/Map094.rxdata
-943887397	45825	Data/Map095.rxdata
-1798566864	8624	Data/Map096.rxdata
-1202523130	45757	Data/Map097.rxdata
-2884863044	10117	Data/Map098.rxdata
-3013872543	78794	Data/Map099.rxdata
-1598069147	75076	Data/Map100.rxdata
-740645750	141081	Data/Map101.rxdata
-591287287	134997	Data/Map102.rxdata
-2926516536	12546	Data/Map103.rxdata
-2190309741	9945	Data/Map104.rxdata
-3428646838	61073	Data/Map105.rxdata
-2527177986	51703	Data/Map106.rxdata
-3222229184	26467	Data/Map107.rxdata
-467313762	55743	Data/Map108.rxdata
-3503542605	65579	Data/Map109.rxdata
-1717241938	50998	Data/Map110.rxdata
-805545722	39000	Data/Map111.rxdata
-4232259789	39357	Data/Map112.rxdata
-2355487574	29375	Data/Map113.rxdata
-2549624832	51912	Data/Map114.rxdata
-1758707724	36034	Data/Map115.rxdata
-3542959250	118342	Data/Map116.rxdata
-909261820	25844	Data/Map117.rxdata
-297423916	60479	Data/Map118.rxdata
-1854474811	32530	Data/Map119.rxdata
-2964100957	37942	Data/Map120.rxdata
-2833504755	30820	Data/Map121.rxdata
-3148244445	66446	Data/Map122.rxdata
-2905793918	11879	Data/Map123.rxdata
-3148323049	13255	Data/Map124.rxdata
-3547610540	47497	Data/Map125.rxdata
-1267129042	12841	Data/Map126.rxdata
-1026324432	58652	Data/Map127.rxdata
-1903936252	5998	Data/Map128.rxdata
-3881948744	12270	Data/Map129.rxdata
-4062516101	21873	Data/Map130.rxdata
-921948429	96965	Data/Map131.rxdata
-760995697	21540	Data/Map132.rxdata
-1948507646	42172	Data/Map133.rxdata
-3691208076	54213	Data/Map134.rxdata
-1705278398	41413	Data/Map135.rxdata
-1810636381	44561	Data/Map136.rxdata
-2839333477	52765	Data/Map137.rxdata
-1996224332	18978	Data/Map138.rxdata
-183543047	18787	Data/Map139.rxdata
-1942645577	17923	Data/Map140.rxdata
-3461579555	35006	Data/Map141.rxdata
-860494956	8900	Data/Map142.rxdata
-1079146810	9215	Data/Map143.rxdata
-1589458732	6867	Data/Map144.rxdata
-998175357	10656	Data/Map145.rxdata
-3836955097	11003	Data/Map146.rxdata
-2110482563	9262	Data/Map147.rxdata
-3185829821	41128	Data/Map148.rxdata
-3684514249	5866	Data/Map149.rxdata
-2464660002	86341	Data/Map150.rxdata
-864469372	60433	Data/Map151.rxdata
-4212497446	89097	Data/Map152.rxdata
-834588249	42939	Data/Map153.rxdata
-117482424	81659	Data/Map154.rxdata
-1159704249	60061	Data/Map155.rxdata
-64299481	44040	Data/Map156.rxdata
-559659525	56883	Data/Map157.rxdata
-1758447941	72897	Data/Map158.rxdata
-2360511334	12322	Data/Map159.rxdata
-942445816	77662	Data/Map160.rxdata
-3619598929	38493	Data/Map161.rxdata
-4106786852	60394	Data/Map162.rxdata
-1936581830	53169	Data/Map163.rxdata
-422254676	58952	Data/Map164.rxdata
-2328485441	28370	Data/Map165.rxdata
-3558600907	82897	Data/Map166.rxdata
-1436814040	45951	Data/Map167.rxdata
-751851822	112288	Data/Map168.rxdata
-1755220031	54550	Data/Map169.rxdata
-267455091	61631	Data/Map170.rxdata
-1267856284	10516	Data/Map171.rxdata
-569618153	63225	Data/Map172.rxdata
-3561868073	27997	Data/Map173.rxdata
-2513450253	150112	Data/Map174.rxdata
-475133417	6281	Data/Map175.rxdata
-4022672176	7474	Data/Map176.rxdata
-1013484756	19932	Data/Map177.rxdata
-3805191931	21892	Data/Map178.rxdata
-1364600504	13872	Data/Map179.rxdata
-3428719456	31088	Data/Map180.rxdata
-1004660117	32688	Data/Map181.rxdata
-3944637423	76267	Data/Map182.rxdata
-4211552867	45384	Data/Map183.rxdata
-3205427037	33814	Data/Map184.rxdata
-2994370023	38799	Data/Map185.rxdata
-2889254062	37443	Data/Map186.rxdata
-1678595942	12363	Data/Map187.rxdata
-1064791979	12726	Data/Map188.rxdata
-638311132	48568	Data/Map189.rxdata
-3409207753	47457	Data/Map190.rxdata
-1086130614	55109	Data/Map191.rxdata
-2605954382	58614	Data/Map192.rxdata
-3624369412	12272	Data/Map193.rxdata
-1468469837	47440	Data/Map194.rxdata
-276687068	40262	Data/Map195.rxdata
-220460569	46462	Data/Map196.rxdata
-2152680101	43180	Data/Map197.rxdata
-3468155062	80750	Data/Map198.rxdata
-4228479036	64433	Data/Map199.rxdata
-3612629986	74425	Data/Map200.rxdata
-2285384845	43750	Data/Map201.rxdata
-4272485242	25941	Data/Map202.rxdata
-456830896	11975	Data/Map203.rxdata
-1703465438	19511	Data/Map204.rxdata
-4089539595	8984	Data/Map205.rxdata
-2042626073	8161	Data/Map206.rxdata
-591378607	14782	Data/Map207.rxdata
-2200045472	16560	Data/Map208.rxdata
-1760047749	15416	Data/Map209.rxdata
-1763325034	15587	Data/Map210.rxdata
-1168806510	25673	Data/Map211.rxdata
-4005444218	7332	Data/Map212.rxdata
-2541453355	33162	Data/Map213.rxdata
-1977258772	44108	Data/Map214.rxdata
-1598414484	46367	Data/Map215.rxdata
-4024179526	81501	Data/Map216.rxdata
-3250522116	4540	Data/Map217.rxdata
-4163784726	12521	Data/Map218.rxdata
-879792497	36907	Data/Map219.rxdata
-1919320485	10010	Data/MapInfos.rxdata
-4254625965	14908394	Data/PkmnAnimations.rxdata
-1709305880	14807403	Data/PkmnAnimations_old.rxdata
-1318867600	1010089	Data/PkmnAnimations_older.rxdata
-1786889330	1103220	Data/PluginScripts.rxdata
-1864363062	1259143	Data/Scripts.rxdata
-392189979	1224347	Data/ScriptsBackup.rxdata
-1829675629	377	Data/Skills.rxdata
-2550356205	431	Data/States.rxdata
-182968016	21722	Data/System.rxdata
-182312102	518865	Data/Tilesets.rxdata
-232350561	345	Data/Troops.rxdata
+1871044593	182	Data/Classes.rxdata
+2418921520	235279	Data/CommonEvents.rxdata
+4049311090	541	Data/Enemies.rxdata
+2133695033	428	Data/Items.rxdata
+2486625389	16179	Data/Map001.rxdata
+3104604186	65275	Data/Map002.rxdata
+1549713042	33598	Data/Map003.rxdata
+3211248887	77227	Data/Map004.rxdata
+1858776618	78902	Data/Map005.rxdata
+4157658097	46479	Data/Map006.rxdata
+2034950254	34718	Data/Map007.rxdata
+4258022427	69015	Data/Map008.rxdata
+4106343825	80256	Data/Map009.rxdata
+3695389542	53385	Data/Map010.rxdata
+1419925300	77709	Data/Map011.rxdata
+493674006	65776	Data/Map012.rxdata
+899606253	91842	Data/Map013.rxdata
+1016535108	60309	Data/Map014.rxdata
+3731003895	107889	Data/Map015.rxdata
+1532775352	64434	Data/Map016.rxdata
+766068117	48075	Data/Map017.rxdata
+3722986035	50376	Data/Map018.rxdata
+1970958788	79291	Data/Map019.rxdata
+2344349988	57633	Data/Map020.rxdata
+195804564	77716	Data/Map021.rxdata
+19319938	55676	Data/Map022.rxdata
+1717482070	94710	Data/Map023.rxdata
+2109747508	35475	Data/Map024.rxdata
+2151056533	103261	Data/Map025.rxdata
+4261039983	103693	Data/Map026.rxdata
+3893848424	42755	Data/Map027.rxdata
+3406221742	29860	Data/Map028.rxdata
+4272820215	105141	Data/Map029.rxdata
+630078690	27145	Data/Map030.rxdata
+2495716907	12324	Data/Map031.rxdata
+2394494192	8595	Data/Map032.rxdata
+2074407203	19721	Data/Map033.rxdata
+2077712472	6466	Data/Map034.rxdata
+4219430154	11217	Data/Map035.rxdata
+941022284	12930	Data/Map036.rxdata
+2784721077	20872	Data/Map037.rxdata
+4042764835	29555	Data/Map038.rxdata
+372893363	20828	Data/Map039.rxdata
+1639291377	39598	Data/Map040.rxdata
+1816779218	6035	Data/Map041.rxdata
+3900392807	22059	Data/Map042.rxdata
+3953702467	12412	Data/Map043.rxdata
+2110229196	5086	Data/Map044.rxdata
+1101933652	29179	Data/Map045.rxdata
+2240804153	14672	Data/Map046.rxdata
+1225071214	15250	Data/Map047.rxdata
+1777702827	13895	Data/Map048.rxdata
+521881665	14112	Data/Map049.rxdata
+1944009042	26822	Data/Map050.rxdata
+3904744180	12337	Data/Map051.rxdata
+3130234095	12378	Data/Map052.rxdata
+1473446311	6420	Data/Map053.rxdata
+3243889107	26502	Data/Map054.rxdata
+419970948	34405	Data/Map055.rxdata
+1066714925	71000	Data/Map056.rxdata
+932556923	25114	Data/Map057.rxdata
+2508483724	91742	Data/Map058.rxdata
+3998090810	84600	Data/Map059.rxdata
+2296822245	6043	Data/Map060.rxdata
+1040042826	13445	Data/Map061.rxdata
+111491788	30731	Data/Map062.rxdata
+1475091270	12299	Data/Map063.rxdata
+4255559298	92625	Data/Map064.rxdata
+3827339066	43985	Data/Map065.rxdata
+4186209703	9641	Data/Map066.rxdata
+3908283058	16735	Data/Map067.rxdata
+2512526460	8353	Data/Map068.rxdata
+431965122	21460	Data/Map069.rxdata
+3631750961	13206	Data/Map070.rxdata
+344109363	67198	Data/Map071.rxdata
+3642090439	22831	Data/Map072.rxdata
+1197511454	13176	Data/Map073.rxdata
+3942662	13211	Data/Map074.rxdata
+2540849345	64990	Data/Map075.rxdata
+864637440	75585	Data/Map076.rxdata
+953513456	15856	Data/Map077.rxdata
+1943317208	46059	Data/Map078.rxdata
+1404142992	7060	Data/Map079.rxdata
+1687927465	45390	Data/Map080.rxdata
+3698021747	24821	Data/Map081.rxdata
+76015400	24836	Data/Map082.rxdata
+1210320620	39443	Data/Map083.rxdata
+491592486	24865	Data/Map084.rxdata
+2420139356	41057	Data/Map085.rxdata
+2994938471	64469	Data/Map086.rxdata
+1338075861	70687	Data/Map087.rxdata
+1127595100	15915	Data/Map088.rxdata
+1718032582	6565	Data/Map089.rxdata
+3962174505	6177	Data/Map090.rxdata
+3897234689	68403	Data/Map091.rxdata
+999832913	60303	Data/Map092.rxdata
+3841684	66075	Data/Map093.rxdata
+3313801228	73893	Data/Map094.rxdata
+3272741995	45825	Data/Map095.rxdata
+3399909939	8624	Data/Map096.rxdata
+3702828769	45757	Data/Map097.rxdata
+2848746195	10117	Data/Map098.rxdata
+545674438	78794	Data/Map099.rxdata
+1030830925	75076	Data/Map100.rxdata
+2786252050	141081	Data/Map101.rxdata
+1252690027	134997	Data/Map102.rxdata
+1737524026	12546	Data/Map103.rxdata
+2217385337	9945	Data/Map104.rxdata
+3705222853	61073	Data/Map105.rxdata
+2722993747	51703	Data/Map106.rxdata
+3688251843	26467	Data/Map107.rxdata
+141029595	55743	Data/Map108.rxdata
+3780234269	65579	Data/Map109.rxdata
+2076082009	50998	Data/Map110.rxdata
+587625096	39000	Data/Map111.rxdata
+2740000969	39357	Data/Map112.rxdata
+3386991657	29375	Data/Map113.rxdata
+3394650046	51912	Data/Map114.rxdata
+914910488	36034	Data/Map115.rxdata
+2594416347	118342	Data/Map116.rxdata
+2551278367	25844	Data/Map117.rxdata
+501783709	60479	Data/Map118.rxdata
+3754435398	32530	Data/Map119.rxdata
+2843515869	37942	Data/Map120.rxdata
+3544118283	30820	Data/Map121.rxdata
+224245950	66446	Data/Map122.rxdata
+1700334515	11879	Data/Map123.rxdata
+4040608584	13255	Data/Map124.rxdata
+3245826183	47497	Data/Map125.rxdata
+3707210617	12841	Data/Map126.rxdata
+3527404857	58652	Data/Map127.rxdata
+869234314	5998	Data/Map128.rxdata
+4058381638	12270	Data/Map129.rxdata
+1433325012	21873	Data/Map130.rxdata
+2699425910	96965	Data/Map131.rxdata
+489249005	21540	Data/Map132.rxdata
+2282686280	42172	Data/Map133.rxdata
+1160575206	54213	Data/Map134.rxdata
+1432795030	41413	Data/Map135.rxdata
+1402573657	44561	Data/Map136.rxdata
+3216336839	52765	Data/Map137.rxdata
+4164975916	18978	Data/Map138.rxdata
+971920649	18787	Data/Map139.rxdata
+3297263594	17923	Data/Map140.rxdata
+2674922995	35006	Data/Map141.rxdata
+1984202120	8900	Data/Map142.rxdata
+2730781502	9215	Data/Map143.rxdata
+451076679	6867	Data/Map144.rxdata
+3639198131	10656	Data/Map145.rxdata
+1276403627	11003	Data/Map146.rxdata
+1297109444	9262	Data/Map147.rxdata
+787090558	41128	Data/Map148.rxdata
+329186857	5866	Data/Map149.rxdata
+2244869015	86341	Data/Map150.rxdata
+50705675	60433	Data/Map151.rxdata
+763859911	89097	Data/Map152.rxdata
+3302309101	42939	Data/Map153.rxdata
+792571083	81659	Data/Map154.rxdata
+4175895341	60061	Data/Map155.rxdata
+559533255	44040	Data/Map156.rxdata
+1577562233	56883	Data/Map157.rxdata
+955971985	72897	Data/Map158.rxdata
+2002202332	12322	Data/Map159.rxdata
+2263592742	77662	Data/Map160.rxdata
+2125483767	38493	Data/Map161.rxdata
+173543795	60394	Data/Map162.rxdata
+73312997	53169	Data/Map163.rxdata
+3930593143	58952	Data/Map164.rxdata
+3905796953	28370	Data/Map165.rxdata
+3178149961	82897	Data/Map166.rxdata
+3067332180	45951	Data/Map167.rxdata
+553812517	112288	Data/Map168.rxdata
+3802571194	54550	Data/Map169.rxdata
+2707157803	61631	Data/Map170.rxdata
+4248165497	10516	Data/Map171.rxdata
+4086243125	63225	Data/Map172.rxdata
+1681185567	27997	Data/Map173.rxdata
+1781811182	150112	Data/Map174.rxdata
+1615427669	6281	Data/Map175.rxdata
+3242671721	7474	Data/Map176.rxdata
+1325166015	19932	Data/Map177.rxdata
+670562569	21892	Data/Map178.rxdata
+4213279141	13872	Data/Map179.rxdata
+2482825906	31088	Data/Map180.rxdata
+774779938	32688	Data/Map181.rxdata
+629882592	76267	Data/Map182.rxdata
+2302343134	45384	Data/Map183.rxdata
+3110704301	33814	Data/Map184.rxdata
+2534727295	38799	Data/Map185.rxdata
+2523320341	37443	Data/Map186.rxdata
+2702935868	12363	Data/Map187.rxdata
+3762132389	12726	Data/Map188.rxdata
+2245924823	48568	Data/Map189.rxdata
+3673085093	47457	Data/Map190.rxdata
+1745117740	55109	Data/Map191.rxdata
+3247331776	58614	Data/Map192.rxdata
+1326865876	12272	Data/Map193.rxdata
+3475324726	47440	Data/Map194.rxdata
+3873130186	40262	Data/Map195.rxdata
+3539409980	46462	Data/Map196.rxdata
+547612973	43180	Data/Map197.rxdata
+1540254278	80750	Data/Map198.rxdata
+1740843355	64433	Data/Map199.rxdata
+2067563102	74425	Data/Map200.rxdata
+3389552025	43750	Data/Map201.rxdata
+616888551	25941	Data/Map202.rxdata
+2421060891	11975	Data/Map203.rxdata
+3452636144	19511	Data/Map204.rxdata
+998827014	8984	Data/Map205.rxdata
+295934527	8161	Data/Map206.rxdata
+4167904567	14782	Data/Map207.rxdata
+1016083916	16560	Data/Map208.rxdata
+77923861	15416	Data/Map209.rxdata
+2722485239	15587	Data/Map210.rxdata
+494642505	25673	Data/Map211.rxdata
+1773884917	7332	Data/Map212.rxdata
+3343114127	33162	Data/Map213.rxdata
+1478708419	44108	Data/Map214.rxdata
+2380425491	46367	Data/Map215.rxdata
+1309220302	81501	Data/Map216.rxdata
+3250811484	4540	Data/Map217.rxdata
+3326830174	12521	Data/Map218.rxdata
+3909254102	36907	Data/Map219.rxdata
+895484502	10010	Data/MapInfos.rxdata
+2515399788	14908394	Data/PkmnAnimations.rxdata
+2053677760	14807403	Data/PkmnAnimations_old.rxdata
+2250000073	1010089	Data/PkmnAnimations_older.rxdata
+2355049840	1103516	Data/PluginScripts.rxdata
+1043973252	1259143	Data/Scripts.rxdata
+612479851	1224347	Data/ScriptsBackup.rxdata
+950189741	377	Data/Skills.rxdata
+525252430	431	Data/States.rxdata
+2444645594	21722	Data/System.rxdata
+1166958388	518865	Data/Tilesets.rxdata
+1829625496	345	Data/Troops.rxdata
 1620877150	245	Data/Weapons.rxdata
-3392384338	81698	Plugins/Advanced Items Field Moves/00_Config.rb
-3018181939	31707	Plugins/Advanced Items Field Moves/01_Code.rb
-1085224624	100891	Plugins/Advanced Items Field Moves/02_Handler.rb
-4170682693	3345	Plugins/Advanced Items Field Moves/03_Terrain Tag.rb
-3597215094	7832	Plugins/Advanced Items Field Moves/04_Game Stats.rb
-2370238143	41361	Plugins/Advanced Items Field Moves/05_Overworld Animation.rb
-3608538735	4462	Plugins/Advanced Items Field Moves/06_Item Use Animation.rb
-2410311116	10067	Plugins/Advanced Items Field Moves/07_Menu.rb
-1503427161	34184	Plugins/Advanced Items Field Moves/08_Music Book Menu.rb
-4197957380	12603	Plugins/Advanced Items Field Moves/10_Overwrites.rb
-2728169028	1784	Plugins/Advanced Items Field Moves/Compatibility/[Compatibility] - Following Pokemon EX Beta.rb
+3788571917	81698	Plugins/Advanced Items Field Moves/00_Config.rb
+2322440377	31707	Plugins/Advanced Items Field Moves/01_Code.rb
+65818008	100891	Plugins/Advanced Items Field Moves/02_Handler.rb
+3564090036	3345	Plugins/Advanced Items Field Moves/03_Terrain Tag.rb
+3586813638	7832	Plugins/Advanced Items Field Moves/04_Game Stats.rb
+4088037008	41361	Plugins/Advanced Items Field Moves/05_Overworld Animation.rb
+1642971978	4462	Plugins/Advanced Items Field Moves/06_Item Use Animation.rb
+2257148477	10067	Plugins/Advanced Items Field Moves/07_Menu.rb
+1163168499	34184	Plugins/Advanced Items Field Moves/08_Music Book Menu.rb
+934870172	12603	Plugins/Advanced Items Field Moves/10_Overwrites.rb
+1083350334	1784	Plugins/Advanced Items Field Moves/Compatibility/[Compatibility] - Following Pokemon EX Beta.rb
 1106392522	14467	Plugins/Advanced Items Field Moves/Compatibility/[Compatibility] - Secret Base Remade.rb
-3523923764	7488	Plugins/Advanced Items Field Moves/Debug/[Debug] Tool.rb
+3199252648	7488	Plugins/Advanced Items Field Moves/Debug/[Debug] Tool.rb
 586355880	317	Plugins/Advanced Items Field Moves/meta.txt
-2722447938	20591	Plugins/Advanced Items Field Moves/Utility/[Utility] Drop Tables .rb
+3661544824	20591	Plugins/Advanced Items Field Moves/Utility/[Utility] Drop Tables .rb
 111628869	6017	Plugins/Animacion Objetos Clave/BW Key Item.rb
 1265705018	157	Plugins/Animacion Objetos Clave/meta.txt
 2570265203	167	Plugins/Barra Dominantes/meta.txt
@@ -285,8 +285,8 @@ https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
 2893429192	23327	Plugins/Cable Club/[001] Cable Club Client/010_Anil_Online_Mejoras.rb
 1137241681	22697	Plugins/Caruban's Dynamic Darkness/Dynamic Darkness.rb
 318876371	139	Plugins/Caruban's Dynamic Darkness/meta.txt
-3097461734	4376	Plugins/ChapasEVs/Chapas.rb
-3338642412	75	Plugins/ChapasEVs/meta.txt
+1476109910	4376	Plugins/ChapasEVs/Chapas.rb
+1047461013	75	Plugins/ChapasEVs/meta.txt
 4061646725	501	Plugins/Continuous Weather Animations/000_Config.rb
 4207267989	5621	Plugins/Continuous Weather Animations/001_ContinuousWeatherAnimations.rb
 4202441529	144	Plugins/Continuous Weather Animations/meta.txt
@@ -376,8 +376,8 @@ https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
 3325141860	16503	Plugins/Nuzlocke EX/013_Origin_Tags.rb
 4177343394	2206	Plugins/Nuzlocke EX/014_MysteryGift_Delivery_Fix.rb
 4209087509	344	Plugins/Nuzlocke EX/meta.txt
-3917582296	4606	Plugins/PokemonEssentialsGameUpdater/AnilInGameUpdater.rb
-621818707	13156	Plugins/PokemonEssentialsGameUpdater/GameVersion.rb
+1294460588	5170	Plugins/PokemonEssentialsGameUpdater/AnilInGameUpdater.rb
+3791678255	13222	Plugins/PokemonEssentialsGameUpdater/GameVersion.rb
 802229945	196	Plugins/PokemonEssentialsGameUpdater/meta.txt
 1234766664	84	Plugins/Pokerider/meta.txt
 3667067931	2439	Plugins/Pokerider/pokerider.rb
@@ -390,9 +390,9 @@ https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
 796361550	9607	Plugins/Torre Batalla/001_Generar_Entrenador_TB.rb
 3278599066	33457	Plugins/Torre Batalla/002_Datos_TB.rb
 2584007575	91	Plugins/Torre Batalla/meta.txt
-2170755575	3472	Plugins/Trade Expert/Config.rb
-203729076	208	Plugins/Trade Expert/meta.txt
-2014359328	10580	Plugins/Trade Expert/Script.rb
+1705923365	3472	Plugins/Trade Expert/Config.rb
+3063783083	208	Plugins/Trade Expert/meta.txt
+3102460818	10580	Plugins/Trade Expert/Script.rb
 2967742461	200	Plugins/Trainer Card Scene/meta.txt
 3925313052	14219	Plugins/Trainer Card Scene/Mr. Gela's HGSS Trainer Card Scene.rb
 90946650	16451	Plugins/[AAI] Advanced AI System/1_Core/0_Settings.rb
@@ -452,38 +452,38 @@ https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
 2661503294	2908	Plugins/[ANIL] Cambios Scripts y Plugins/001_Cambios Plugins/[AAI] Advanced AI System/005_SwitchIntelligence.rb
 1687088853	1092	Plugins/[ANIL] Cambios Scripts y Plugins/001_Cambios Plugins/[AAI] Advanced AI System/006_SpeedWeather.rb
 3437263492	1552	Plugins/[ANIL] Cambios Scripts y Plugins/001_Cambios Plugins/[AAI] Advanced AI System/007_EmergencyExit.rb
-187706368	602	Plugins/[DBK_000] Deluxe Battle Kit/meta.txt
-575036048	2917	Plugins/[DBK_000] Deluxe Battle Kit/Settings.rb
-2388540059	11930	Plugins/[DBK_000] Deluxe Battle Kit/[000] Essentials Patches/[000] Compiler.rb
-1017481420	6565	Plugins/[DBK_000] Deluxe Battle Kit/[000] Essentials Patches/[001] Trainer Editor Refactor.rb
-104350704	39700	Plugins/[DBK_000] Deluxe Battle Kit/[000] Essentials Patches/[002] Damage Calc Refactor.rb
-925203357	24524	Plugins/[DBK_000] Deluxe Battle Kit/[000] Essentials Patches/[003] Command Menu Refactor.rb
-3419420207	11473	Plugins/[DBK_000] Deluxe Battle Kit/[000] Essentials Patches/[004] Plugin Placholders.rb
-868761924	43196	Plugins/[DBK_000] Deluxe Battle Kit/[000] Essentials Patches/[005] Updated Effects.rb
-3561921947	26546	Plugins/[DBK_000] Deluxe Battle Kit/[000] Essentials Patches/[006] Updated AI Effects.rb
-3114814053	31497	Plugins/[DBK_000] Deluxe Battle Kit/[000] Essentials Patches/[007] Debug.rb
-3676650436	4027	Plugins/[DBK_000] Deluxe Battle Kit/[001] Deluxe Utilities/[000] PBEffects Hash.rb
-3794465626	38131	Plugins/[DBK_000] Deluxe Battle Kit/[001] Deluxe Utilities/[001] Animation Utilities.rb
-945423080	31009	Plugins/[DBK_000] Deluxe Battle Kit/[001] Deluxe Utilities/[002] Misc Utilities.rb
-94900279	32792	Plugins/[DBK_000] Deluxe Battle Kit/[001] Deluxe Utilities/[003] Deluxe Battle Rules.rb
-3726015857	13058	Plugins/[DBK_000] Deluxe Battle Kit/[001] Deluxe Utilities/[004] Wild Boss Attributes.rb
-4228327442	20708	Plugins/[DBK_000] Deluxe Battle Kit/[001] Deluxe Utilities/[005] Mega Evolution.rb
-1261788484	12615	Plugins/[DBK_000] Deluxe Battle Kit/[001] Deluxe Utilities/[006] Primal Reversion.rb
-1204356487	7010	Plugins/[DBK_000] Deluxe Battle Kit/[001] Deluxe Utilities/[007] Shadow Pokemon.rb
-2625124259	21453	Plugins/[DBK_000] Deluxe Battle Kit/[001] Deluxe Utilities/[008] Databox Styles.rb
-1141729596	21713	Plugins/[DBK_000] Deluxe Battle Kit/[002] Midbattle Scripting/[000] Midbattle Animations.rb
-2756060701	40846	Plugins/[DBK_000] Deluxe Battle Kit/[002] Midbattle Scripting/[001] Midbattle Overwrites.rb
-2626694925	76174	Plugins/[DBK_000] Deluxe Battle Kit/[002] Midbattle Scripting/[002] Midbattle Triggers.rb
-199034695	33996	Plugins/[DBK_000] Deluxe Battle Kit/[002] Midbattle Scripting/[003] MidbattleScripts Module.rb
-341412923	41510	Plugins/[DBK_000] Deluxe Battle Kit/[002] Midbattle Scripting/[004] MidbattleHandlers Scripts.rb
+3829109104	602	Plugins/[DBK_000] Deluxe Battle Kit/meta.txt
+1011530669	2917	Plugins/[DBK_000] Deluxe Battle Kit/Settings.rb
+2535276521	11930	Plugins/[DBK_000] Deluxe Battle Kit/[000] Essentials Patches/[000] Compiler.rb
+3697612347	6565	Plugins/[DBK_000] Deluxe Battle Kit/[000] Essentials Patches/[001] Trainer Editor Refactor.rb
+301279841	39700	Plugins/[DBK_000] Deluxe Battle Kit/[000] Essentials Patches/[002] Damage Calc Refactor.rb
+2477447414	24524	Plugins/[DBK_000] Deluxe Battle Kit/[000] Essentials Patches/[003] Command Menu Refactor.rb
+4041915408	11473	Plugins/[DBK_000] Deluxe Battle Kit/[000] Essentials Patches/[004] Plugin Placholders.rb
+2115362431	43196	Plugins/[DBK_000] Deluxe Battle Kit/[000] Essentials Patches/[005] Updated Effects.rb
+1643280895	26546	Plugins/[DBK_000] Deluxe Battle Kit/[000] Essentials Patches/[006] Updated AI Effects.rb
+3691109736	31497	Plugins/[DBK_000] Deluxe Battle Kit/[000] Essentials Patches/[007] Debug.rb
+29372409	4027	Plugins/[DBK_000] Deluxe Battle Kit/[001] Deluxe Utilities/[000] PBEffects Hash.rb
+238936016	38131	Plugins/[DBK_000] Deluxe Battle Kit/[001] Deluxe Utilities/[001] Animation Utilities.rb
+1729032438	31009	Plugins/[DBK_000] Deluxe Battle Kit/[001] Deluxe Utilities/[002] Misc Utilities.rb
+3884399751	32792	Plugins/[DBK_000] Deluxe Battle Kit/[001] Deluxe Utilities/[003] Deluxe Battle Rules.rb
+3567488034	13058	Plugins/[DBK_000] Deluxe Battle Kit/[001] Deluxe Utilities/[004] Wild Boss Attributes.rb
+3355058575	20708	Plugins/[DBK_000] Deluxe Battle Kit/[001] Deluxe Utilities/[005] Mega Evolution.rb
+2371287404	12615	Plugins/[DBK_000] Deluxe Battle Kit/[001] Deluxe Utilities/[006] Primal Reversion.rb
+1039052654	7010	Plugins/[DBK_000] Deluxe Battle Kit/[001] Deluxe Utilities/[007] Shadow Pokemon.rb
+75247074	21453	Plugins/[DBK_000] Deluxe Battle Kit/[001] Deluxe Utilities/[008] Databox Styles.rb
+4150765842	21713	Plugins/[DBK_000] Deluxe Battle Kit/[002] Midbattle Scripting/[000] Midbattle Animations.rb
+4040854886	40846	Plugins/[DBK_000] Deluxe Battle Kit/[002] Midbattle Scripting/[001] Midbattle Overwrites.rb
+3821351470	76174	Plugins/[DBK_000] Deluxe Battle Kit/[002] Midbattle Scripting/[002] Midbattle Triggers.rb
+2719428028	33996	Plugins/[DBK_000] Deluxe Battle Kit/[002] Midbattle Scripting/[003] MidbattleScripts Module.rb
+4122323268	41510	Plugins/[DBK_000] Deluxe Battle Kit/[002] Midbattle Scripting/[004] MidbattleHandlers Scripts.rb
 2569849750	28894	Plugins/[DBK_000] Deluxe Battle Kit/[002] Midbattle Scripting/[005] Combates Legendarios.rb
-4286071121	308	Plugins/[DBK_001] Enhanced Battle UI/meta.txt
-720712145	12784	Plugins/[DBK_001] Enhanced Battle UI/[000] Main.rb
-1015556924	6734	Plugins/[DBK_001] Enhanced Battle UI/[001] Outline Utilities.rb
-1336828590	13569	Plugins/[DBK_001] Enhanced Battle UI/[002] Selection Menu.rb
-3877059466	50183	Plugins/[DBK_001] Enhanced Battle UI/[003] Battler Info UI.rb
-3468827343	20798	Plugins/[DBK_001] Enhanced Battle UI/[004] Move Info UI.rb
-1220006051	7868	Plugins/[DBK_001] Enhanced Battle UI/[005] Poke Ball UI.rb
+4103640766	308	Plugins/[DBK_001] Enhanced Battle UI/meta.txt
+1196453743	12784	Plugins/[DBK_001] Enhanced Battle UI/[000] Main.rb
+2809670650	6734	Plugins/[DBK_001] Enhanced Battle UI/[001] Outline Utilities.rb
+2501651739	13569	Plugins/[DBK_001] Enhanced Battle UI/[002] Selection Menu.rb
+3660616470	50183	Plugins/[DBK_001] Enhanced Battle UI/[003] Battler Info UI.rb
+3262709432	20798	Plugins/[DBK_001] Enhanced Battle UI/[004] Move Info UI.rb
+1331657962	7868	Plugins/[DBK_001] Enhanced Battle UI/[005] Poke Ball UI.rb
 3672419462	445	Plugins/[LBDSKY] Lin's IV EV Summary Screen/IV EV Summary Handlers.rb
 2683234062	204	Plugins/[LBDSKY] Lin's IV EV Summary Screen/meta.txt
 3687067394	4740	Plugins/[LBDSKY] Lin's IV EV Summary Screen/Stats Summary Page.rb
@@ -560,16 +560,16 @@ https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
 574770567	28168	Plugins/[LBDSKY] [MUI_002] Pokedex Data Page/[003] Sub Menu.rb
 1796520322	14041	Plugins/[LBDSKY] [MUI_002] Pokedex Data Page/[004] Moves Menu.rb
 1392101424	31018	Plugins/[LBDSKY] [MUI_002] Pokedex Data Page/[005] Data Messages.rb
-3233965578	777	Plugins/[LBDSKY] [Plugin] Fancy Badges/Config.rb
-593638224	163	Plugins/[LBDSKY] [Plugin] Fancy Badges/meta.txt
-1442271005	10725	Plugins/[LBDSKY] [Plugin] Fancy Badges/Script.rb
+140755897	777	Plugins/[LBDSKY] [Plugin] Fancy Badges/Config.rb
+424313320	163	Plugins/[LBDSKY] [Plugin] Fancy Badges/meta.txt
+3964920287	10725	Plugins/[LBDSKY] [Plugin] Fancy Badges/Script.rb
 825276447	150	Plugins/[LBDSKY] [Plugin] Huellas en la arena/meta.txt
 3080881249	6214	Plugins/[LBDSKY] [Plugin] Huellas en la arena/script.rb
 2807997364	26189	Plugins/[LBDSKY] [Plugin] Intro Versus/001_script_principal.rb
 2145862381	11023	Plugins/[LBDSKY] [Plugin] Intro Versus/002_Transiciones_legendarios.rb
 81694929	85	Plugins/[LBDSKY] [Plugin] Intro Versus/meta.txt
-3330415965	348	Plugins/[LBDSKY] [Plugin] Mostrar tipos en combate/meta.txt
-1445760206	7076	Plugins/[LBDSKY] [Plugin] Mostrar tipos en combate/script.rb
+64823010	348	Plugins/[LBDSKY] [Plugin] Mostrar tipos en combate/meta.txt
+2258008868	7076	Plugins/[LBDSKY] [Plugin] Mostrar tipos en combate/script.rb
 4117983499	4475	Plugins/[LBDSKY] [Plugin] Pantalla de Título Animada/Config.rb
 103626788	222	Plugins/[LBDSKY] [Plugin] Pantalla de Título Animada/meta.txt
 597416617	19036	Plugins/[LBDSKY] [Plugin] Pantalla de Título Animada/[000] Scripts/Backgrounds.rb
@@ -580,18 +580,18 @@ https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
 628387702	10712	Plugins/[LBDSKY] [Plugin] Pantalla de Título Animada/[000] Scripts/Misc.rb
 2511986826	12251	Plugins/[LBDSKY] [Plugin] Pantalla de Título Animada/[000] Scripts/Overlays.rb
 2121629204	5418	Plugins/[LBDSKY] [Plugin] Pantalla de Título Animada/[000] Scripts/Scene Intro.rb
-1461149328	3544	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/meta.txt
-3910674123	5204	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/[000] Settings.rb
-1702609205	6645	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/[001] Compiler.rb
-303883786	34399	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/[002] Sprite Editor.rb
-3908814195	6460	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/[003] Pokemon UI.rb
-1493131164	13531	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/[004] Game Data.rb
-1074687397	13170	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/[005] Pokemon Sprites.rb
-91296713	34513	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/[006] Battler Sprites.rb
-1290208245	12661	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/[007] Substitute Doll.rb
-989914634	9571	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/[008] Deluxe Bitmap.rb
-4012709579	3507	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/[009] Deluxe Additions.rb
-640481823	5713	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/[010] Spinda Spots.rb
+975462418	3544	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/meta.txt
+3043171106	5204	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/[000] Settings.rb
+3630655075	6645	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/[001] Compiler.rb
+2999118965	34399	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/[002] Sprite Editor.rb
+328296208	6460	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/[003] Pokemon UI.rb
+2083161839	13531	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/[004] Game Data.rb
+1624934654	13170	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/[005] Pokemon Sprites.rb
+835968168	34513	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/[006] Battler Sprites.rb
+1601956142	12661	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/[007] Substitute Doll.rb
+741586898	9571	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/[008] Deluxe Bitmap.rb
+2365979326	3507	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/[009] Deluxe Additions.rb
+2364010395	5713	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/[010] Spinda Spots.rb
 9616554	3428	Plugins/[LBDSKY] [Plugin] Pokémon Animados para DBK/[011] Patch Super Shiny OW.rb
 3024980379	6397	Plugins/[LBDS] [Plugin] Following Pokemon EX/Configuration/000_Config.rb
 2116647427	1685	Plugins/[LBDS] [Plugin] Following Pokemon EX/Configuration/001_Dialogue_Item.rb
