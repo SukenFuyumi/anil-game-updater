@@ -233,7 +233,7 @@ https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
 2515399788	14908394	Data/PkmnAnimations.rxdata
 2053677760	14807403	Data/PkmnAnimations_old.rxdata
 2250000073	1010089	Data/PkmnAnimations_older.rxdata
-712152066	1103429	Data/PluginScripts.rxdata
+409625307	1103426	Data/PluginScripts.rxdata
 1043973252	1259143	Data/Scripts.rxdata
 612479851	1224347	Data/ScriptsBackup.rxdata
 950189741	377	Data/Skills.rxdata
@@ -376,7 +376,7 @@ https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
 3325141860	16503	Plugins/Nuzlocke EX/013_Origin_Tags.rb
 4177343394	2206	Plugins/Nuzlocke EX/014_MysteryGift_Delivery_Fix.rb
 4209087509	344	Plugins/Nuzlocke EX/meta.txt
-2995693819	5081	Plugins/PokemonEssentialsGameUpdater/AnilInGameUpdater.rb
+1879649371	5026	Plugins/PokemonEssentialsGameUpdater/AnilInGameUpdater.rb
 3791678255	13222	Plugins/PokemonEssentialsGameUpdater/GameVersion.rb
 802229945	196	Plugins/PokemonEssentialsGameUpdater/meta.txt
 1234766664	84	Plugins/Pokerider/meta.txt

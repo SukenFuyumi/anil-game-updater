@@ -125,12 +125,11 @@ module AnilInGameUpdater
       return false
     end
 
-    # --- Fase 2: aplicar. En Android sobrescribir no siempre persiste, asi que
-    # se BORRA el archivo y se vuelve a CREAR (con fsync en write_bin). ---
+    # --- Fase 2: aplicar (sobrescritura simple; NUNCA borra el archivo original
+    # para no perderlo si la escritura no persiste). ---
     applied = true
     staged.each do |tmp, real|
       begin
-        File.delete(real) rescue nil
         write_bin(real, read_bin(tmp))
       rescue
         applied = false
