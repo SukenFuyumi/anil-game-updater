@@ -1,6 +1,6 @@
-4.1.8
+4.1.9
 https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
-4122032938	195	pu_config
+2366843362	195	pu_config
 546257780	6240	mkxp.json
 4191177482	273	Data/serverinfo.ini
 393078057	1574	Data/Actors.rxdata
@@ -233,7 +233,7 @@ https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
 2515399788	14908394	Data/PkmnAnimations.rxdata
 2053677760	14807403	Data/PkmnAnimations_old.rxdata
 2250000073	1010089	Data/PkmnAnimations_older.rxdata
-811665000	1103462	Data/PluginScripts.rxdata
+1116551903	1104170	Data/PluginScripts.rxdata
 1043973252	1259143	Data/Scripts.rxdata
 612479851	1224347	Data/ScriptsBackup.rxdata
 950189741	377	Data/Skills.rxdata
@@ -336,6 +336,7 @@ https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
 2898103538	8569	Plugins/misc_scripts/008_Menú de starters.rb
 2287404279	4518	Plugins/misc_scripts/009_MostrarPoke.rb
 1213752231	2204	Plugins/misc_scripts/010_Evo en combate.rb
+3574009068	1991	Plugins/misc_scripts/010_Turbo persistente.rb
 2233694961	10674	Plugins/misc_scripts/011_Menu_eleccion_modos.rb
 3610387164	3863	Plugins/misc_scripts/012_Peinados_Furfrou.rb
 1600588647	23154	Plugins/misc_scripts/013_Punch Bag Minigame.rb

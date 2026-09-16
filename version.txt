@@ -1,7 +1,9 @@
-GAME_VERSION=4.1.8
+GAME_VERSION=4.1.9
 FORCE_UPDATE=false
 DOWNLOAD_URL=https://drive.google.com/file/d/1yYH7Snh3UoY9Y2zil_xmXvR9fVRlP0QB/view?usp=drive_link
-CHANGELOG=[v4.1.8]
+CHANGELOG=[v4.1.9]
+- El nivel de turbo ahora se recuerda entre sesiones: ya no se resetea al reabrir el juego (se guarda con la partida).
+[v4.1.8]
 - El actualizador dentro del juego (deltas, sin redescargar) funciona en PC. En Android/movil la actualizacion sigue siendo por redescarga.
 - Correcciones de estabilidad del actualizador.
 [v4.1.6]

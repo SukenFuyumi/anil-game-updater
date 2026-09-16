@@ -1,3 +1,5 @@
+[v4.1.9]
+- El nivel de turbo ahora se recuerda entre sesiones: ya no se resetea al reabrir el juego (se guarda con la partida).
 [v4.1.8]
 - El actualizador dentro del juego (deltas, sin redescargar) funciona en PC. En Android/movil la actualizacion sigue siendo por redescarga.
 - Correcciones de estabilidad del actualizador.
