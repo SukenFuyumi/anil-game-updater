@@ -1,1 +1,2 @@
-- Corregido el actualizador DENTRO del juego en Android (NaviaXP/JoiPlay): ahora sí baja e instala las actualizaciones sin redescargar el juego completo.
+- El actualizador dentro del juego (deltas, sin redescargar) funciona en PC. En Android/movil la actualizacion sigue siendo por redescarga.
+- Correcciones de estabilidad del actualizador.

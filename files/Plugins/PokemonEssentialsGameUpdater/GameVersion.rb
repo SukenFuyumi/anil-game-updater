@@ -264,7 +264,7 @@ module PokeUpdater
 					# se sigue con el flujo normal ($joiplay / boton / .exe / link).
 					updated_in_game = false
 					begin
-						updated_in_game = AnilInGameUpdater.run if defined?(AnilInGameUpdater)
+						updated_in_game = AnilInGameUpdater.run if defined?(AnilInGameUpdater) && (RUBY_PLATFORM =~ /mingw|mswin|windows/i)
 					rescue => e
 						puts "AnilInGameUpdater error: #{e.message}" if $DEBUG_LOG
 						updated_in_game = false
