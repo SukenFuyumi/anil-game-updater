@@ -26,7 +26,7 @@ RCLONE="rclone"                       # o la ruta completa a rclone.exe
 # Destino en Drive: "<remoto>:<nombre EXACTO del archivo actual en tu Drive>".
 # Debe coincidir con el archivo que ya tienes subido (mismo nombre = mismo ID = mismo link).
 # Si esta en una carpeta: "gdrive:Carpeta/Pokemon_Anil.zip".
-DRIVE_DEST="gdrive:Pokemon_Anil_4.0_Online_Edition.zip"
+DRIVE_DEST="gdrive:Pokemon Añil 4.0 Online Edition/Pokemon_Anil_4.0_Online_Edition.zip"
 ZIP_OUT="E:/Pokemon Super añil randomlocke/Pokemon_Anil_release.zip"
 CLEAN_SCRIPTS_SIZE=1259143            # tamaño de Scripts.rxdata LIMPIO (sin \$DEBUG)
 # =============================================================================
