@@ -67,7 +67,9 @@ parent="$(dirname "$GAME_DIR")"; base="$(basename "$GAME_DIR")"
 echo "   ZIP: $ZIP_OUT ($(stat -c %s "$ZIP_OUT" | awk '{printf "%.0f MB", $1/1048576}'))"
 
 echo ">> 5/5  subir a Drive (mismo link)"
-"$RCLONE" copyto "$ZIP_OUT" "$DRIVE_DEST" --progress || { echo "fallo rclone"; exit 1; }
+# --checksum: compara por hash (MD5), sube solo si el contenido cambio de verdad
+# (evita el falso "ya esta igual" de la comparacion por fecha/tamaño).
+"$RCLONE" copyto "$ZIP_OUT" "$DRIVE_DEST" --progress --checksum || { echo "fallo rclone"; exit 1; }
 
 echo ""
 echo "LISTO. Canal $VERSION publicado (PC recibe deltas in-game) y ZIP actualizado en Drive (mismo link para movil)."
