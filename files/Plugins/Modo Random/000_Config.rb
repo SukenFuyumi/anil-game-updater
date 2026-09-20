@@ -262,6 +262,23 @@ module RandomizedChallenge
                   :POISONMEMORY, :GROUNDMEMORY,:FLYINGMEMORY, :PSYCHICMEMORY, :BUGMEMORY, :ROCKMEMORY, :GHOSTMEMORY, :DRAGONMEMORY, :DARKMEMORY,
                 :STEELMEMORY, :FAIRYMEMORY]
 
+  # Valor por defecto de la regla "Ocultar objetos inservibles" (objetos que no se pueden
+  # usar en un randomlocke, sobre todo objetos exclusivos de legendarios). Se puede activar
+  # desde el menú de reglas del Random. Cuando está activa, estos objetos no salen como random.
+  HIDE_USELESS_ITEMS_DEFAULT_VALUE = false
+
+  # Objetos exclusivos de legendarios / inservibles en un randomlocke. Los símbolos que no
+  # existan en esta versión simplemente se ignoran (no pasa nada).
+  USELESS_ITEMS = [
+    :ADAMANTORB, :LUSTROUSORB, :GRISEOUSORB, :GRISEOUSCORE, :ADAMANTCRYSTAL, :LUSTROUSGLOBE,
+    :REDORB, :BLUEORB, :SOULDEW, :RUSTEDSWORD, :RUSTEDSHIELD, :DNASPLICERS, :DNASPLICERSUSED,
+    :REVEALGLASS, :ZYGARDECUBE, :PRISONBOTTLE, :NSOLARIZER, :NLUNARIZER, :REINSOFUNITY,
+    :ROTOMCATALOG, :ROTOMPHONE, :GRACIDEA, :SHAYMINSKY, :MELTANLURE,
+    :FLAMEPLATE, :SPLASHPLATE, :ZAPPLATE, :MEADOWPLATE, :ICICLEPLATE, :FISTPLATE, :TOXICPLATE,
+    :EARTHPLATE, :SKYPLATE, :MINDPLATE, :INSECTPLATE, :STONEPLATE, :SPOOKYPLATE, :DRACOPLATE,
+    :DREADPLATE, :IRONPLATE, :PIXIEPLATE, :BLANKPLATE, :LEGENDPLATE
+  ]
+
   # Lista de objetos que no podrán salir como objetos equipados en salvajes
   HELD_ITEM_BLACK_LIST = []
 
@@ -317,7 +334,8 @@ class PokemonGlobalMetadata
                 :random_types, :randomize_items, :randomize_held_items,
                 :consistent_wild_encounters, :randomize_trainers, :randomize_starters,
                 :semi_random_mode, :remember_trainer_teams, :random_trainer_teams,
-                :random_trainer_items, :randomize_pokemon, :different_movesets_per_form
+                :random_trainer_items, :randomize_pokemon, :different_movesets_per_form,
+                :hide_useless_items
 end
 module RandomizerConfigurator
   RULES = {
@@ -466,6 +484,14 @@ module RandomizerConfigurator
       :parent => :RANDOMIZE_ITEMS,
       :check => lambda { RandomizedChallenge.randomize_held_items? },
       :toggle => lambda { RandomizerConfigurator.toggle_held_items }
+    },
+    :HIDE_USELESS_ITEMS => {
+      :name  => _INTL("Ocultar objs. inservibles"),
+      :desc  => _INTL("Evita que aparezcan como objetos random los objetos que no se pueden usar en un randomlocke (esferas, placas y otros objetos exclusivos de legendarios)."),
+      :order => 20,
+      :parent => :RANDOMIZE_ITEMS,
+      :check => lambda { RandomizedChallenge.hide_useless_items? },
+      :toggle => lambda { RandomizerConfigurator.toggle_hide_useless_items }
     },
     # :TRAINERS_CAN_GIVE_RANDOM_ITEMS => {
     #   :name  => _INTL("Entrenadores derrotados pueden dar objetos random"),
@@ -621,6 +647,13 @@ module RandomizerConfigurator
 
   def toggle_held_items
     $PokemonGlobal.randomize_held_items = !$PokemonGlobal.randomize_held_items
+  end
+
+  def toggle_hide_useless_items
+    if $PokemonGlobal.hide_useless_items.nil?
+      $PokemonGlobal.hide_useless_items = RandomizedChallenge::HIDE_USELESS_ITEMS_DEFAULT_VALUE
+    end
+    $PokemonGlobal.hide_useless_items = !$PokemonGlobal.hide_useless_items
   end
 
   def toggle_trainers_items

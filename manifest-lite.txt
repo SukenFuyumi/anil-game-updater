@@ -1,6 +1,6 @@
-4.1.9
+4.2.0
 https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
-2366843362	195	pu_config
+1285315165	195	pu_config
 546257780	6240	mkxp.json
 4191177482	273	Data/serverinfo.ini
 393078057	1574	Data/Actors.rxdata
@@ -233,7 +233,7 @@ https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
 2515399788	14908394	Data/PkmnAnimations.rxdata
 2053677760	14807403	Data/PkmnAnimations_old.rxdata
 2250000073	1010089	Data/PkmnAnimations_older.rxdata
-1116551903	1104170	Data/PluginScripts.rxdata
+768445920	1105377	Data/PluginScripts.rxdata
 1043973252	1259143	Data/Scripts.rxdata
 612479851	1224347	Data/ScriptsBackup.rxdata
 950189741	377	Data/Skills.rxdata
@@ -343,10 +343,10 @@ https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
 2904807315	838	Plugins/misc_scripts/014_Guardar al curar.rb
 2472967259	10487	Plugins/misc_scripts/015_damage_numbers.rb
 1352046377	146	Plugins/misc_scripts/meta.txt
-1698048966	34234	Plugins/Modo Random/000_Config.rb
+3309736638	36112	Plugins/Modo Random/000_Config.rb
 197967351	30240	Plugins/Modo Random/001_Main.rb
 2268559689	10322	Plugins/Modo Random/002_Abilities.rb
-2481824902	15015	Plugins/Modo Random/003_Items.rb
+120548180	15383	Plugins/Modo Random/003_Items.rb
 2068149170	9208	Plugins/Modo Random/004_Moves.rb
 4155872134	7234	Plugins/Modo Random/005_Evolutions.rb
 1386745901	5248	Plugins/Modo Random/006_Trainers.rb
@@ -362,9 +362,9 @@ https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
 2109868632	1557	Plugins/Mover panoramas/script.rb
 928922067	170	Plugins/Multi Save/meta.txt
 3258124329	32529	Plugins/Multi Save/Multi Save.rb
-3323286722	8028	Plugins/Nuzlocke EX/000_Config.rb
-2022803956	7811	Plugins/Nuzlocke EX/001_Main Module.rb
-4141736548	14527	Plugins/Nuzlocke EX/002_Rule Select.rb
+2225243276	8499	Plugins/Nuzlocke EX/000_Config.rb
+2227016726	8093	Plugins/Nuzlocke EX/001_Main Module.rb
+3229453639	14910	Plugins/Nuzlocke EX/002_Rule Select.rb
 1630587297	2969	Plugins/Nuzlocke EX/003_Start and End.rb
 16929204	4917	Plugins/Nuzlocke EX/004_Permafaint.rb
 901758997	15100	Plugins/Nuzlocke EX/005_Capture Rules.rb

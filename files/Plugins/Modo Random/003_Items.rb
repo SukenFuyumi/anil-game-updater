@@ -142,9 +142,16 @@ module RandomizedChallenge
     enabled? && $PokemonGlobal.randomize_held_items ? true : false
   end
 
+  # ¿Está activa la regla "Ocultar objetos inservibles"? (si $PokemonGlobal aún no la tiene,
+  # usa el valor por defecto del config).
+  def self.hide_useless_items?
+    v = $PokemonGlobal.hide_useless_items
+    v.nil? ? HIDE_USELESS_ITEMS_DEFAULT_VALUE : (v ? true : false)
+  end
+
   def self.random_item(ignore_exclusions = false, no_tm = false, is_held_item = false)
     # Cache filtered lists based on parameters
-    cache_key = "#{ignore_exclusions}_#{no_tm}_#{is_held_item}"
+    cache_key = "#{ignore_exclusions}_#{no_tm}_#{is_held_item}_#{hide_useless_items?}"
     @@filtered_items ||= {}
 
     unless @@filtered_items[cache_key]
@@ -278,7 +285,7 @@ module RandomizedChallenge
 
 def self.excluded_item?(item, is_held_item = false)
   item_data = GameData::Item.get(item.id)
-  ITEM_BLACK_LIST.include?(item.id) || (is_held_item && HELD_ITEM_BLACK_LIST.include?(item.id)) || item_data.is_key_item? || item_data.is_mail? || item_data.is_snag_ball? || item_data.is_HM? || item_data.is_mega_stone? ? true : false
+  ITEM_BLACK_LIST.include?(item.id) || (is_held_item && HELD_ITEM_BLACK_LIST.include?(item.id)) || (hide_useless_items? && USELESS_ITEMS.include?(item.id)) || item_data.is_key_item? || item_data.is_mail? || item_data.is_snag_ball? || item_data.is_HM? || item_data.is_mega_stone? ? true : false
 end
 
   def self.randomize_tm_moves(tms, types = [])

@@ -1,4 +1,10 @@
 module ChallengeModes
+  # Cláusulas de captura "vanilla" (familia Una captura por mapa). Son mutuamente
+  # excluyentes con el Contador de Capturas (:CAPTURE_COUNTER): no se pueden tener a la vez,
+  # para que no se empalmen dos sistemas de captura. Se aplica al elegir en el menú
+  # (002_Rule Select) y como salvaguarda en on? (001_Main Module: el Contador tiene prioridad).
+  CAPTURE_CLAUSES = [:ONE_CAPTURE, :FIRST_CAPTURE, :GIFT_CLAUSE, :SHINY_CLAUSE, :DUPS_CLAUSE, :LEGENDARY_CLAUSE]
+
   # Array of species that are to be ignored when checking for "One
   # Capture per Map" rule
   ONE_CAPTURE_WHITELIST = [

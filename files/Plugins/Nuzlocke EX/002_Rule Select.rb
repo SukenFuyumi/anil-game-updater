@@ -186,6 +186,13 @@ module ChallengeModes
               # (selected_rules.include?(:PERMAFAINT) && rule == :GAME_OVER_WHITEOUT) ||
           selected_rules.push(rule)
           selected_rules.push(:PERMAFAINT) if !selected_rules.include?(:PERMAFAINT) && rule == :GAME_OVER_WHITEOUT
+          # Mutua exclusión: Contador de Capturas <-> cláusulas de captura vanilla.
+          # Activar una desactiva la(s) otra(s) para que no se empalmen.
+          if rule == :CAPTURE_COUNTER
+            selected_rules.delete_if { |r| CAPTURE_CLAUSES.include?(r) }
+          elsif CAPTURE_CLAUSES.include?(rule)
+            selected_rules.delete(:CAPTURE_COUNTER)
+          end
           updated = true
         end
         if rule != :PERMAFAINT && !selected_rules.include?(:PERMAFAINT) && ChallengeModes::RULES[rule][:parent] == :PERMAFAINT

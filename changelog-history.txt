@@ -1,3 +1,6 @@
+[v4.2.0]
+Nuzlocke: el Contador de Capturas y las clausulas de captura clasicas ahora son excluyentes; al activar una se desactiva la otra para que no se empalmen dos sistemas.
+Modo Random: nueva regla "Ocultar objetos inservibles" que evita que salgan como objetos random los objetos exclusivos de legendarios (esferas, placas, etc.).
 [v4.1.9]
 - El nivel de turbo ahora se recuerda entre sesiones: ya no se resetea al reabrir el juego (se guarda con la partida).
 [v4.1.8]

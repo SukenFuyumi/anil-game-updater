@@ -12,7 +12,11 @@ module ChallengeModes
 
   def on?(rule = nil)
     return false if !(running? && @@started)
-    return rule.nil? ? true : rules.include?(rule)
+    return true if rule.nil?
+    # Salvaguarda: si el Contador de Capturas está activo, las cláusulas de captura vanilla
+    # se ignoran aunque un save antiguo las tenga guardadas (no se empalman dos sistemas).
+    return false if CAPTURE_CLAUSES.include?(rule) && rules.include?(:CAPTURE_COUNTER)
+    return rules.include?(rule)
   end
 
   def toggle(force = nil); @@started = force.nil? ? !@@started : force; end

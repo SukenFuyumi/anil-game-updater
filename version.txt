@@ -1,7 +1,10 @@
-GAME_VERSION=4.1.9
+GAME_VERSION=4.2.0
 FORCE_UPDATE=false
 DOWNLOAD_URL=https://drive.google.com/file/d/1yYH7Snh3UoY9Y2zil_xmXvR9fVRlP0QB/view?usp=drive_link
-CHANGELOG=[v4.1.9]
+CHANGELOG=[v4.2.0]
+Nuzlocke: el Contador de Capturas y las clausulas de captura clasicas ahora son excluyentes; al activar una se desactiva la otra para que no se empalmen dos sistemas.
+Modo Random: nueva regla "Ocultar objetos inservibles" que evita que salgan como objetos random los objetos exclusivos de legendarios (esferas, placas, etc.).
+[v4.1.9]
 - El nivel de turbo ahora se recuerda entre sesiones: ya no se resetea al reabrir el juego (se guarda con la partida).
 [v4.1.8]
 - El actualizador dentro del juego (deltas, sin redescargar) funciona en PC. En Android/movil la actualizacion sigue siendo por redescarga.
