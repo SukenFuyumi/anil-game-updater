@@ -1,7 +1,9 @@
-GAME_VERSION=4.2.0
+GAME_VERSION=4.2.1
 FORCE_UPDATE=false
 DOWNLOAD_URL=https://drive.google.com/file/d/1yYH7Snh3UoY9Y2zil_xmXvR9fVRlP0QB/view?usp=drive_link
-CHANGELOG=[v4.2.0]
+CHANGELOG=[v4.2.1]
+NPC de repetidos: ahora en modo normal y nuzlocke te da un Pokemon de BST similar al que entregas (como Don Prodigio), en vez de uno totalmente aleatorio. En randomlocke sigue dando uno aleatorio como hasta ahora.
+[v4.2.0]
 Nuzlocke: el Contador de Capturas y las clausulas de captura clasicas ahora son excluyentes; al activar una se desactiva la otra para que no se empalmen dos sistemas.
 Modo Random: nueva regla "Ocultar objetos inservibles" que evita que salgan como objetos random los objetos exclusivos de legendarios (esferas, placas, etc.).
 [v4.1.9]

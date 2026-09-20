@@ -79,6 +79,40 @@ def pbAnilRandomRewardSpecies
   return :RATTATA # último recurso improbable
 end
 
+# Especie de BST similar (respaldo propio si Trade Expert no estuviera cargado).
+# Como Don Prodigio: una especie con BST dentro de ±margen del entregado.
+def pbAnilSimilarBstSpecies(given, margin = 0.10)
+  base = (given.species_data rescue nil)
+  target = base ? base.base_stats.values.sum : 0
+  return pbAnilRandomRewardSpecies if target <= 0
+  keys = GameData::Species.keys
+  [margin, 0.20, 0.35].each do |m|
+    lo = (target * (1 - m)); hi = (target * (1 + m))
+    300.times do
+      sd = (GameData::Species.get(keys.sample) rescue nil)
+      next if !sd || sd.form != 0
+      next if sd.species == given.species
+      bst = sd.base_stats.values.sum
+      return sd.species if bst >= lo && bst <= hi
+    end
+  end
+  return pbAnilRandomRewardSpecies
+end
+
+# Elige la especie a entregar según el MODO (misma regla que Don Prodigio / Trade Expert):
+#  - Randomlocke (randomizador activo): especie ALEATORIA, igual que ya lo teníamos.
+#  - Normal y Nuzlocke (sin random): especie de BST SIMILAR (evita Zigzagoon -> Giratina).
+def pbAnilRewardSpecies(given)
+  if defined?(RandomizedChallenge) && RandomizedChallenge.enabled?
+    return pbAnilRandomRewardSpecies
+  end
+  if defined?(TradeExpert) && TradeExpert.respond_to?(:fetchEqualSpecies)
+    list = (TradeExpert.fetchEqualSpecies(given.species, 0.10) rescue nil)
+    return list.sample if list.is_a?(Array) && !list.empty?
+  end
+  return pbAnilSimilarBstSpecies(given)
+end
+
 # --- El intercambiador -----------------------------------------------------------
 
 def pbAnilDuplicateTrader
@@ -130,7 +164,7 @@ def pbAnilDuplicateTrader
   # Genera el reward: especie aleatoria, randomizada por el reto (ability/moves vía alias).
   level = ANIL_TRADER_LEVEL
   level = given.level if !level || level <= 0
-  reward = Pokemon.new(pbAnilRandomRewardSpecies, level)
+  reward = Pokemon.new(pbAnilRewardSpecies(given), level)
   reward.heal rescue nil
   # Marca de origen: viene del Intercambiador de Repetidos (Magnemite).
   reward.anil_origin = :magnemite if reward.respond_to?(:anil_origin=)

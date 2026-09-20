@@ -22,7 +22,7 @@ set -uo pipefail
 GAME_DIR="E:/Pokemon Super añil randomlocke/Pokemon Anil V4.13"
 UPDATER_DIR="E:/Pokemon Super añil randomlocke/anil-game-updater"
 SEVENZIP="/c/Program Files/7-Zip/7z.exe"
-RCLONE="rclone"                       # o la ruta completa a rclone.exe
+RCLONE="/c/Users/Suken/Downloads/rclone-v1.75.1-windows-amd64/rclone-v1.75.1-windows-amd64/rclone.exe"  # ruta completa (no está en PATH)
 # Destino en Drive: "<remoto>:<nombre EXACTO del archivo actual en tu Drive>".
 # Debe coincidir con el archivo que ya tienes subido (mismo nombre = mismo ID = mismo link).
 # Si esta en una carpeta: "gdrive:Carpeta/Pokemon_Anil.zip".
