@@ -1,0 +1,5 @@
+Nueva PLAZA ONLINE: un lugar de encuentro donde ves a otros jugadores de tu MISMO modo de juego (normal, nuzlocke o randomlocke) moverse en tiempo real.
+- Chatea con la gente de la sala.
+- Retalos a combate: usa las mismas reglas del online de siempre y NO afecta tu progreso (niveles, EVs, IVs y objetos se restauran al terminar).
+- Se entra desde el menu de pausa: Online, y luego Plaza Online.
+- Los intercambios siguen siendo por el sistema online de siempre (apalabrados), para no romper el progreso individual.

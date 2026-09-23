@@ -384,14 +384,18 @@ end
 #===============================================================================
 def pbAnilOnlineMenu
   loop do
+    opciones = [_INTL("Combatir online")]
+    opciones.push(_INTL("Plaza Online")) if defined?(pbAnilStartHub)
+    opciones.push(_INTL("Editar EVs del equipo"))
+    opciones.push(_INTL("Salir"))
     cmd = pbMessage(_INTL("Un misterioso Alakazam proyecta un enlace psíquico...\n¿Qué quieres hacer?"),
-      [_INTL("Combatir online"),
-       _INTL("Editar EVs del equipo"),
-       _INTL("Salir")], 3)
-    case cmd
-    when 0
+      opciones, opciones.length)
+    sel = opciones[cmd]
+    if sel == _INTL("Combatir online")
       pbAnilStartOnline
-    when 1
+    elsif sel == _INTL("Plaza Online")
+      pbAnilStartHub
+    elsif sel == _INTL("Editar EVs del equipo")
       pbAnilEVEditor
     else
       break

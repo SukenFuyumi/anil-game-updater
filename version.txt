@@ -1,7 +1,13 @@
-GAME_VERSION=4.2.1
+GAME_VERSION=4.3.0
 FORCE_UPDATE=false
 DOWNLOAD_URL=https://drive.google.com/file/d/1yYH7Snh3UoY9Y2zil_xmXvR9fVRlP0QB/view?usp=drive_link
-CHANGELOG=[v4.2.1]
+CHANGELOG=[v4.3.0]
+Nueva PLAZA ONLINE: un lugar de encuentro donde ves a otros jugadores de tu MISMO modo de juego (normal, nuzlocke o randomlocke) moverse en tiempo real.
+- Chatea con la gente de la sala.
+- Retalos a combate: usa las mismas reglas del online de siempre y NO afecta tu progreso (niveles, EVs, IVs y objetos se restauran al terminar).
+- Se entra desde el menu de pausa: Online, y luego Plaza Online.
+- Los intercambios siguen siendo por el sistema online de siempre (apalabrados), para no romper el progreso individual.
+[v4.2.1]
 NPC de repetidos: ahora en modo normal y nuzlocke te da un Pokemon de BST similar al que entregas (como Don Prodigio), en vez de uno totalmente aleatorio. En randomlocke sigue dando uno aleatorio como hasta ahora.
 [v4.2.0]
 Nuzlocke: el Contador de Capturas y las clausulas de captura clasicas ahora son excluyentes; al activar una se desactiva la otra para que no se empalmen dos sistemas.

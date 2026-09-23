@@ -1,6 +1,6 @@
-4.2.1
+4.3.0
 https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
-876497045	195	pu_config
+3154513649	195	pu_config
 546257780	6240	mkxp.json
 4191177482	273	Data/serverinfo.ini
 393078057	1574	Data/Actors.rxdata
@@ -229,11 +229,12 @@ https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
 3250811484	4540	Data/Map217.rxdata
 3326830174	12521	Data/Map218.rxdata
 3909254102	36907	Data/Map219.rxdata
-895484502	10010	Data/MapInfos.rxdata
+944303351	10861	Data/Map220.rxdata
+1638788989	11148	Data/MapInfos.rxdata
 2515399788	14908394	Data/PkmnAnimations.rxdata
 2053677760	14807403	Data/PkmnAnimations_old.rxdata
 2250000073	1010089	Data/PkmnAnimations_older.rxdata
-1089680066	1105878	Data/PluginScripts.rxdata
+588487640	1118276	Data/PluginScripts.rxdata
 1043973252	1259143	Data/Scripts.rxdata
 612479851	1224347	Data/ScriptsBackup.rxdata
 950189741	377	Data/Skills.rxdata
@@ -282,7 +283,8 @@ https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
 3312581009	3931	Plugins/Cable Club/[001] Cable Club Client/007_CableClub_Rules.rb
 4284167604	1872	Plugins/Cable Club/[001] Cable Club Client/008_RecordMixer.rb
 996452713	16500	Plugins/Cable Club/[001] Cable Club Client/009_RNG_Patch.rb
-2893429192	23327	Plugins/Cable Club/[001] Cable Club Client/010_Anil_Online_Mejoras.rb
+2311524465	23592	Plugins/Cable Club/[001] Cable Club Client/010_Anil_Online_Mejoras.rb
+2536215992	36230	Plugins/Cable Club/[001] Cable Club Client/011_Anil_Hub.rb
 1137241681	22697	Plugins/Caruban's Dynamic Darkness/Dynamic Darkness.rb
 318876371	139	Plugins/Caruban's Dynamic Darkness/meta.txt
 1476109910	4376	Plugins/ChapasEVs/Chapas.rb
