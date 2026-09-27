@@ -1,0 +1,4 @@
+Name       = Anil Play Time Guard
+Version    = 1.0
+Essentials = 21.1
+Credits    = Anil Super Randomlocke

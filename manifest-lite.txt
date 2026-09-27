@@ -1,6 +1,6 @@
-4.3.0
+4.3.1
 https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
-3154513649	195	pu_config
+3299089465	195	pu_config
 546257780	6240	mkxp.json
 4191177482	273	Data/serverinfo.ini
 393078057	1574	Data/Actors.rxdata
@@ -234,7 +234,7 @@ https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
 2515399788	14908394	Data/PkmnAnimations.rxdata
 2053677760	14807403	Data/PkmnAnimations_old.rxdata
 2250000073	1010089	Data/PkmnAnimations_older.rxdata
-588487640	1118276	Data/PluginScripts.rxdata
+1908627589	1119582	Data/PluginScripts.rxdata
 1043973252	1259143	Data/Scripts.rxdata
 612479851	1224347	Data/ScriptsBackup.rxdata
 950189741	377	Data/Skills.rxdata
@@ -258,6 +258,8 @@ https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
 3199252648	7488	Plugins/Advanced Items Field Moves/Debug/[Debug] Tool.rb
 586355880	317	Plugins/Advanced Items Field Moves/meta.txt
 3661544824	20591	Plugins/Advanced Items Field Moves/Utility/[Utility] Drop Tables .rb
+1453070595	3494	Plugins/Anil Play Time Guard/001_PlayTimeGuard.rb
+5006365	105	Plugins/Anil Play Time Guard/meta.txt
 111628869	6017	Plugins/Animacion Objetos Clave/BW Key Item.rb
 1265705018	157	Plugins/Animacion Objetos Clave/meta.txt
 2570265203	167	Plugins/Barra Dominantes/meta.txt

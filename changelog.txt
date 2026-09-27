@@ -1,1 +1,1 @@
-- El nivel de turbo ahora se recuerda entre sesiones: ya no se resetea al reabrir el juego (se guarda con la partida).
+Corregido: el contador de tiempo de juego ya no se reinicia por accidente. Ahora se guarda a prueba de fallos y, si algun save lo tenia mal, se restaura solo al cargar.
