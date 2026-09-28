@@ -1,6 +1,6 @@
-4.3.1
+4.3.2
 https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
-3299089465	195	pu_config
+1296182113	195	pu_config
 546257780	6240	mkxp.json
 4191177482	273	Data/serverinfo.ini
 393078057	1574	Data/Actors.rxdata
@@ -234,7 +234,7 @@ https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
 2515399788	14908394	Data/PkmnAnimations.rxdata
 2053677760	14807403	Data/PkmnAnimations_old.rxdata
 2250000073	1010089	Data/PkmnAnimations_older.rxdata
-1908627589	1119582	Data/PluginScripts.rxdata
+3919217115	1119613	Data/PluginScripts.rxdata
 1043973252	1259143	Data/Scripts.rxdata
 612479851	1224347	Data/ScriptsBackup.rxdata
 950189741	377	Data/Skills.rxdata
@@ -347,7 +347,7 @@ https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
 2904807315	838	Plugins/misc_scripts/014_Guardar al curar.rb
 2472967259	10487	Plugins/misc_scripts/015_damage_numbers.rb
 1352046377	146	Plugins/misc_scripts/meta.txt
-3309736638	36112	Plugins/Modo Random/000_Config.rb
+901600225	36180	Plugins/Modo Random/000_Config.rb
 197967351	30240	Plugins/Modo Random/001_Main.rb
 2268559689	10322	Plugins/Modo Random/002_Abilities.rb
 120548180	15383	Plugins/Modo Random/003_Items.rb
