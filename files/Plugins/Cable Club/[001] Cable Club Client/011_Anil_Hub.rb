@@ -636,9 +636,26 @@ class AnilHubSession
   end
 
   def do_chat
-    txt = pbEnterText(_INTL("Chat (máx {1}):", AnilHub::MAX_CHAT), 0, AnilHub::MAX_CHAT)
+    txt = anil_hub_chat_input
     return if !txt || txt.strip.empty?
     send("chat", txt.strip)
+  end
+
+  # En móvil (mkxp-z/NaviaXP) el IME del teclado virtual duplica/repite teclas
+  # ("letras a lo loco"). El teclado EN PANTALLA del juego (textinput != 0) no usa
+  # el IME, así que en móvil lo forzamos solo para el chat y restauramos después.
+  # En PC se respeta el método de entrada que el jugador tenga configurado.
+  def anil_hub_chat_input
+    help = _INTL("Chat (máx {1}):", AnilHub::MAX_CHAT)
+    is_pc = (RUBY_PLATFORM =~ /mingw|mswin|windows/i)
+    return pbEnterText(help, 0, AnilHub::MAX_CHAT) if is_pc
+    prev = ($PokemonSystem.textinput rescue nil)
+    begin
+      ($PokemonSystem.textinput = 1) rescue nil
+      pbEnterText(help, 0, AnilHub::MAX_CHAT)
+    ensure
+      ($PokemonSystem.textinput = prev) rescue nil unless prev.nil?
+    end
   end
 
   # Reaplica el plan de EVs si el jugador lo editó dentro de la plaza. Como los

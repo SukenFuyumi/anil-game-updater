@@ -151,17 +151,36 @@ module AnilOnlineEV
     false
   end
 
-  # ---- presets (archivos en OnlineEVPresets/) -------------------------------
+  # ---- presets (archivos .evset) --------------------------------------------
+  # Carpeta PERSISTENTE (junto a los saves): en PC = %APPDATA%/Pokemon Anil, en
+  # Android = almacenamiento privado de la app. Ahí SÍ se puede escribir; la
+  # carpeta del juego en Android es de solo lectura (scoped storage), por eso
+  # antes los presets no se guardaban en móvil. Se sigue LEYENDO la carpeta vieja
+  # del juego (PRESET_DIR relativo) para no perder los presets empaquetados o
+  # creados en versiones anteriores.
+  def preset_dir
+    base = (System.data_directory rescue nil)
+    dir = (base && !base.to_s.empty?) ? File.join(base, PRESET_DIR) : PRESET_DIR
+    Dir.mkdir(dir) unless Dir.exist?(dir)
+    dir
+  rescue
+    PRESET_DIR
+  end
+
   def preset_files
-    Dir.mkdir(PRESET_DIR) unless Dir.exist?(PRESET_DIR)
-    Dir.chdir(PRESET_DIR) { Dir.glob("*.evset") }
+    names = []
+    [preset_dir, PRESET_DIR].uniq.each do |d|
+      next unless Dir.exist?(d)
+      (Dir.chdir(d) { Dir.glob("*.evset") } rescue []).each { |f| names << f unless names.include?(f) }
+    end
+    names
   rescue
     []
   end
 
   def save_preset(name)
-    Dir.mkdir(PRESET_DIR) unless Dir.exist?(PRESET_DIR)
-    File.open(sprintf("%s/%s.evset", PRESET_DIR, name), "w") do |f|
+    dir = preset_dir
+    File.open(sprintf("%s/%s.evset", dir, name), "w") do |f|
       $player.party.each_with_index do |pkmn, i|
         spread = plan[i] || empty_spread
         vals = STATS.map { |s| spread[s] || 0 }.join(",")
@@ -174,14 +193,19 @@ module AnilOnlineEV
   end
 
   def delete_preset(filename)
-    File.delete(sprintf("%s/%s", PRESET_DIR, filename))
+    [preset_dir, PRESET_DIR].uniq.each do |d|
+      path = sprintf("%s/%s", d, filename)
+      File.delete(path) if File.exist?(path)
+    end
     true
   rescue => e
     pbMessage(_INTL("No pude borrar el preset: {1}", e.message)); false
   end
 
   def load_preset(filename)
-    lines = File.readlines(sprintf("%s/%s", PRESET_DIR, filename))
+    path = sprintf("%s/%s", preset_dir, filename)
+    path = sprintf("%s/%s", PRESET_DIR, filename) unless File.exist?(path)
+    lines = File.readlines(path)
     lines.each_with_index do |line, i|
       next unless plan[i] ||= empty_spread
       vals = line.chomp.split(";").last.to_s.split(",").map(&:to_i)

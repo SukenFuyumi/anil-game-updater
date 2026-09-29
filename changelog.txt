@@ -1,1 +1,1 @@
-Modo Random: la regla "Ocultar objetos inservibles" ahora tambien oculta las 4 mascaras de Ogerpon (Turquesa, Fuente, Horno y Cimiento), que antes podian salir en objetos random aunque son inutiles sin Ogerpon.
+Plaza Online: los presets del editor de EVs ahora se guardan y cargan bien tambien en Android (antes las escrituras a la carpeta del juego no persistian; ahora van al almacenamiento de la app, junto a las partidas). En movil, el chat de la Plaza usa el teclado en pantalla del juego para evitar que el teclado virtual repita letras.
