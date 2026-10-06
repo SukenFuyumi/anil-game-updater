@@ -43,7 +43,50 @@ module ChallengeModes
   end
 
   def open_rules_menu
+    had_counter = ($PokemonGlobal.challenge_rules.include?(:CAPTURE_COUNTER) rescue false)
     $PokemonGlobal.challenge_rules = select_mode($PokemonGlobal.challenge_rules)
+    now_counter = ($PokemonGlobal.challenge_rules.include?(:CAPTURE_COUNTER) rescue false)
+    # Si se acaba de ACTIVAR el Contador de Capturas en una partida ya avanzada,
+    # rellena retroactivamente las zonas ya hechas (si no, saldrían en gris).
+    backfill_capture_counter if now_counter && !had_counter
+  end
+
+  # Marca como "ya capturada" cada zona donde el jugador YA atrapó un Pokémon
+  # (según su mapa de obtención). Solo cuenta capturas reales (obtain_method 0 =
+  # atrapado); huevos/intercambios/eventos/regalos no marcan zona, igual que el
+  # Contador en vivo. Idempotente: solo añade, nunca quita.
+  def backfill_capture_counter
+    return if !$player
+    $PokemonGlobal.challenge_encs ||= {}
+    mons = []
+    mons.concat($player.party) if $player.party
+    if $PokemonStorage
+      $PokemonStorage.boxes.each { |box| box.each { |pk| mons << pk if pk } }
+    end
+    mons.each do |pkmn|
+      next if !pkmn
+      next if (pkmn.obtain_method rescue 0) != 0   # solo capturas reales
+      map_id = (pkmn.obtain_map rescue 0)
+      next if !map_id || map_id == 0
+      mark_zone_captured(map_id)
+    end
+  rescue => e
+    (echoln "backfill_capture_counter error: #{e.message}") rescue nil
+  end
+
+  # Marca un mapa (y sus mapas divididos padre/hijo) como con captura registrada.
+  def mark_zone_captured(map_id)
+    $PokemonGlobal.challenge_encs[map_id] = true
+    if ChallengeModes::SPLIT_MAPS_FOR_ENCOUNTERS[map_id]
+      ChallengeModes::SPLIT_MAPS_FOR_ENCOUNTERS[map_id].each { |c| $PokemonGlobal.challenge_encs[c] = true }
+    end
+    ChallengeModes::SPLIT_MAPS_FOR_ENCOUNTERS.each do |parent_map, child_maps|
+      if child_maps.include?(map_id)
+        $PokemonGlobal.challenge_encs[parent_map] = true
+        child_maps.each { |c| $PokemonGlobal.challenge_encs[c] = true }
+        break
+      end
+    end
   end
 
   #-----------------------------------------------------------------------------

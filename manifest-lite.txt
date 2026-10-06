@@ -1,6 +1,6 @@
-4.3.3
+4.3.4
 https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
-903887273	195	pu_config
+2248098704	195	pu_config
 546257780	6240	mkxp.json
 4191177482	273	Data/serverinfo.ini
 393078057	1574	Data/Actors.rxdata
@@ -234,7 +234,7 @@ https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
 2515399788	14908394	Data/PkmnAnimations.rxdata
 2053677760	14807403	Data/PkmnAnimations_old.rxdata
 2250000073	1010089	Data/PkmnAnimations_older.rxdata
-3905321293	1120251	Data/PluginScripts.rxdata
+3373753564	1120907	Data/PluginScripts.rxdata
 1043973252	1259143	Data/Scripts.rxdata
 612479851	1224347	Data/ScriptsBackup.rxdata
 950189741	377	Data/Skills.rxdata
@@ -327,6 +327,7 @@ https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
 1553496490	7897	Plugins/Level Caps EX/002_Additions.rb
 3242860627	1657	Plugins/Level Caps EX/level_caps_ex_compatibility.rb
 2330776449	191	Plugins/Level Caps EX/meta.txt
+2737177292	350	Plugins/MakerStudio/003_Editor/.project-stats.json
 1036177078	8242	Plugins/Map Zoom/Map Zoom.rb
 603739500	173	Plugins/Map Zoom/meta.txt
 3962647716	10425	Plugins/misc_scripts/000_Scripts_menores.rb
@@ -368,7 +369,7 @@ https://raw.githubusercontent.com/SukenFuyumi/anil-game-updater/main/files
 3258124329	32529	Plugins/Multi Save/Multi Save.rb
 2225243276	8499	Plugins/Nuzlocke EX/000_Config.rb
 2227016726	8093	Plugins/Nuzlocke EX/001_Main Module.rb
-3229453639	14910	Plugins/Nuzlocke EX/002_Rule Select.rb
+1650041036	16834	Plugins/Nuzlocke EX/002_Rule Select.rb
 1630587297	2969	Plugins/Nuzlocke EX/003_Start and End.rb
 16929204	4917	Plugins/Nuzlocke EX/004_Permafaint.rb
 901758997	15100	Plugins/Nuzlocke EX/005_Capture Rules.rb
